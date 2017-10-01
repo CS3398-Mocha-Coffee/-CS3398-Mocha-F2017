@@ -23,12 +23,13 @@ if (r.status_code == 200):   #if status_code == 200 then the request was pulled 
     for x in ingredients_list:       #traverses ingredients list
         ingredients.append(x.text)   #extracts text from <html tag> and appends to ingredients list
         x.next_sibling   #jumps to next <span> html tag
-
+    del ingredients_list[:]
     ol = soup.find('ol', {'class': 'list-numbers recipe-directions__list'})   #cooking directions are stored within <ol>
     instructions = ol.findAll('span', {'class': 'recipe-directions__list--item'}) #access cooking instructions via <ol>
     for i in instructions:         #traverses instructions list
         directions.append(i.text)  #extracts text from <html tag> and appends to ingredients list
         i.next_sibling   #jumps to next <span> html tag
+    del instructions[:]
 
 else:
     print("Error! Bad URL!")   #if status_code != 200 then request pulled with errors
