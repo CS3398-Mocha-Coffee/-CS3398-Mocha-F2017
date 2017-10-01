@@ -1,13 +1,13 @@
 # -CS3398-Mocha-F2017
 
 ## To Be Completed:
-- [] Design UML, Class Design, Flow of Control 
-- [] Create shopping list feature
-- [] Create "My Pantry" feature
-- [] Map out website design
-- [] Allow recipes to interact with shopping list
-- [] Recipe Search
-- [] Web Crawl/Scrape into database
+- [ ] Design UML, Class Design, Flow of Control 
+- [ ] Create shopping list feature
+- [ ] Create "My Pantry" feature
+- [ ] Map out website design
+- [ ] Allow recipes to interact with shopping list
+- [ ] Recipe Search
+- [ ] Web Crawl/Scrape into database
 
 
 ## Completed:
