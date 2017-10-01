@@ -7,5 +7,3 @@ Extracts recipe name, cook time, prep time, total time and ingredients from a re
 -extract cooking directions from (www.allrecipes.com)
 -crawl allrecipes.com for more recipes
 -export extracted data into CSV file with proper fields. 
-
-Changes: Added comments for better understanding
