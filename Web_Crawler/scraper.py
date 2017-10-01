@@ -42,5 +42,6 @@ print("Cook Time: ", cookTime)
 print("Ingredients: ", end = '')
 for item in ingredients:
     print (item, sep = '', end =',', flush = True)
+print("\nDirections: ", end = '')
 for dir in directions:
     print (dir, end ='\n\n')
