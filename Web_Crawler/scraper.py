@@ -6,7 +6,8 @@ HEADERS = {   #some websites require a user agent. This is here in case it is ne
    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
 }
 
-ingredients = [] #ingredients are extracted into array (line 23)
+directions = []  #directions are extracted into array
+ingredients = [] #ingredients are extracted into array
 r = requests.get("http://allrecipes.com/recipe/73350/shrimp-burritos") #grabs contents from given URL
 
 
@@ -19,10 +20,15 @@ if (r.status_code == 200):   #if status_code == 200 then the request was pulled 
     cookTime = soup.find('time', {'itemprop': 'cookTime'}).get_text()      #extracts the cook time for recipe
     prepTime = soup.find('time', {'itemprop': 'prepTime'}).get_text()      #extracts the prep time for recipe
     ingredients_list = soup.findAll('span', {'itemprop': 'ingredients'})   #extracts the ingredients (w/ html tags) into a list
-    for x in ingredients_list:       #traverses list
+    for x in ingredients_list:       #traverses ingredients list
         ingredients.append(x.text)   #extracts text from <html tag> and appends to ingredients list
         x.next_sibling   #jumps to next <span> html tag
-    instructions = soup.findAll('span', {'class': 'recipe-directions_list--item'})
+
+    ol = soup.find('ol', {'class': 'list-numbers recipe-directions__list'})   #cooking directions are stored within <ol>
+    instructions = ol.findAll('span', {'class': 'recipe-directions__list--item'}) #access cooking instructions via <ol>
+    for i in instructions:         #traverses instructions list
+        directions.append(i.text)  #extracts text from <html tag> and appends to ingredients list
+        i.next_sibling   #jumps to next <span> html tag
 
 else:
     print("Error! Bad URL!")   #if status_code != 200 then request pulled with errors
@@ -36,4 +42,5 @@ print("Cook Time: ", cookTime)
 print("Ingredients: ", end = '')
 for item in ingredients:
     print (item, sep = '', end =',', flush = True)
-print("\nInstructions: ", instructions)   #*Instructions are not being pulled properly from HTML***FIX THIS***
+for dir in directions:
+    print (dir, end ='\n\n')
