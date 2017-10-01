@@ -37,7 +37,3 @@ print("Ingredients: ", end = '')
 for item in ingredients:
     print (item, sep = '', end =',', flush = True)
 print("\nInstructions: ", instructions)   #*Instructions are not being pulled properly from HTML***FIX THIS***
-
-
-
-
