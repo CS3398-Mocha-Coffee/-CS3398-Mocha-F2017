@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import time
+import json
 #THIS IS INCOMPLETE. does not efficiently grab URL paths (will grab same path multiple times)
                     #Need to find more effiencent way of crawling
                     #only crawls food catagories so far
@@ -15,23 +16,31 @@ def get_page(url):
         exit()
 
 def get_domain(url):
-    content = get_page(url)
-    content_pattern = re.compile(r"""/recipes/\d+/\S*/""")
-    result = re.findall(content_pattern, content)
-    #print(result)
-    return result
+    content = get_page(url)   #grabs content from page
+    content_pattern = re.compile(r"""/recipes/\d+/\S*/\S*/""") #Uses a regex to find the path for each recipe catagory
+    result = re.findall(content_pattern, content)              #Does not find all catagories (yet) due to redundant links
+    return result                                              #But it still crawls a lot of catagories/recipes in the end
 
-#def get_recipe(url):
+def get_recipe(url):
+    soup = BeautifulSoup(get_page(url), "html.parser")                  #allrecipes.com stores recipe urls in json list
+    recipe_json = json.loads(soup.select_one("script[type=application/ld+json]").text) #this selects the url list
+    recipe_urls = [dct["url"] for dct in recipe_json["itemListElement"]] #this takes url at every ListItem position
+    return recipe_urls                                                   #and stores it into recipe_urls list as a string
 
 
 ###DO NOT REMOVE DELAY
 if __name__ == '__main__':
-    start_url = 'http://allrecipes.com'
-    domain_list = get_domain(start_url)
-    for path in domain_list:   #dynamic delay to prevent server side network congestion
+    domain = []
+    start_url = 'http://allrecipes.com' #start url that we will attach directory path to
+    domain_list = get_domain(start_url) #gets the directory paths
+    for d in domain_list: #filter out redundant paths
+        if d not in domain:
+            domain.append(d)
+    del domain_list       #deletes allocated memory from domain_list that we transferred to domain []
+    for path in domain:
         print(start_url+path)
-        t0 = time.time()
-        content = get_domain(start_url+path)
-        print(content)
-        response_delay = time.time() - t0
-        time.sleep(10*response_delay) #wait 10x longer than it took server to respond
+        t0 = time.time()                     #dynamic delay to prevent server side network congestion
+        recipe_url = get_recipe(start_url+path)
+        print(recipe_url)
+        response_delay = time.time() - t0    #checks the response time of server (intentional delay)
+        time.sleep(10*response_delay)        #wait 10x longer than it took server to respond
