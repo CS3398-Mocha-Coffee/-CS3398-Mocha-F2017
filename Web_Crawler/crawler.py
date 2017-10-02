@@ -3,9 +3,8 @@ import requests
 import re
 import time
 import json
-#THIS IS INCOMPLETE. does not efficiently grab URL paths (will grab same path multiple times)
-                    #Need to find more effiencent way of crawling
-                    #only crawls food catagories so far
+
+
 def get_page(url):
     r = requests.get(url)
     if r.status_code == 200:
