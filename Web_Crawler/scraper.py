@@ -2,7 +2,8 @@ from bs4 import BeautifulSoup  #html parser
 import requests #URL navigator
 
 
-HEADERS = {   #some websites require a user agent. This is here in case it is needed
+HEADERS = {   #some websites require a user agent to be spoofed cause they dont like bots :(
+              # This is here in case it is needed
    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
 }
 
