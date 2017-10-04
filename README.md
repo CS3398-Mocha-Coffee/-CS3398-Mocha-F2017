@@ -15,4 +15,5 @@
 - [x] Create classes for each General Ingredient Category
 - [x] User Login
 - [x] Web Scraper UML Design
+- [x] Create Ingredients Database
 
