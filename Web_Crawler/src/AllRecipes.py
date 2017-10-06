@@ -1,7 +1,6 @@
 import re
 import requests
 import json
-import urllib.request
 from bs4 import BeautifulSoup
 from Abstract import Abstract
 
