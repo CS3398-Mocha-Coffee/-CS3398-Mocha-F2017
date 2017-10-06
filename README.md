@@ -7,8 +7,6 @@
 - [ ] Map out website design
 - [ ] Allow recipes to interact with shopping list
 - [ ] Recipe Search
-- [ ] Web Crawl/Scrape into database
-
 
 ## Completed:
 - [x] Determine how to approach the create of Ingredients Database
@@ -16,4 +14,6 @@
 - [x] User Login
 - [x] Web Scraper UML Design
 - [x] Create Ingredients Database
+- [x] Web Crawl/Scrape into database
+
 
