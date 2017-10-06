@@ -4,7 +4,6 @@ from pyprogress import *
 import csv
 if __name__ == '__main__':
     allUrls = []
-    allRecipes = []
     x = AllRecipes.AllRecipes("http://www.allrecipes.com")
     domain_list = x.getDomain()
     #progress bar for crawl:
