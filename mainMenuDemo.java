@@ -23,7 +23,7 @@ public class mainMenuDemo extends JFrame {
 	private ExitButtonHandler ebHandler;
 	
 	public mainMenuDemo() {
-		//Instantiate the labels: May decide to ditch depending on looks
+		//Instantiate the label or greeting
 		greetingL = new JLabel("***Welcome to Pantry Partner***", SwingConstants.CENTER);
 		
 		
@@ -35,11 +35,9 @@ public class mainMenuDemo extends JFrame {
 		ebHandler = new ExitButtonHandler();
 		exitB.addActionListener(ebHandler);
 		
-		//Set the window's title
+		
 		setTitle("Pantry Partner");		
-		//Get the content pane (CP)
 		Container pane = getContentPane();		
-		//Set the layout (5 slots by 4 slots)
 		pane.setLayout(new GridLayout(5,4));
 		
 		//Add things to the pane in the order you want them to appear
@@ -49,7 +47,7 @@ public class mainMenuDemo extends JFrame {
 		pane.add(pantryB);		
 		pane.add(exitB);
 		
-		//Other JFrame stuff
+		
 		setSize(WIDTH, HEIGHT);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);		
