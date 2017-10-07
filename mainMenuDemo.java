@@ -36,7 +36,7 @@ public class mainMenuDemo extends JFrame {
 		exitB.addActionListener(ebHandler);
 		
 		//Set the window's title
-		setTitle("THE UNNAMED PANTRY/RECIPE APP");		
+		setTitle("Pantry Partner");		
 		//Get the content pane (CP)
 		Container pane = getContentPane();		
 		//Set the layout (5 slots by 4 slots)
