@@ -16,7 +16,7 @@ public class mainMenuDemo extends JFrame {
 	
 	private static final int WIDTH = 800;
 	private static final int HEIGHT = 700;
-	//private JLabel recipeL, pantryL;
+	private JLabel greetingL;
 	private JButton recipeB, pantryB, loginB, exitB;
 	
 	//Button handlers: only dealing with the exit one now
@@ -24,8 +24,8 @@ public class mainMenuDemo extends JFrame {
 	
 	public mainMenuDemo() {
 		//Instantiate the labels: May decide to ditch depending on looks
-		//recipeL = new JLabel(" RECIPES ", SwingConstants.RIGHT);
-		//pantryL = new JLabel(" PANTRY ", SwingConstants.RIGHT);
+		greetingL = new JLabel("***Welcome to Pantry Partner***", SwingConstants.CENTER);
+		
 		
 		//Buttons:
 		recipeB = new JButton("RECIPES");
@@ -43,6 +43,7 @@ public class mainMenuDemo extends JFrame {
 		pane.setLayout(new GridLayout(5,4));
 		
 		//Add things to the pane in the order you want them to appear
+		pane.add(greetingL);
 		pane.add(loginB);
 		pane.add(recipeB);
 		pane.add(pantryB);		
