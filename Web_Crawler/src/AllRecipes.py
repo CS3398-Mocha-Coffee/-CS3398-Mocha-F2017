@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from Abstract import Abstract
 
 class AllRecipes(Abstract):
-    content_pattern = re.compile(r"""/recipes/\d+/\S*/\S*/""")
+    __content_pattern = re.compile(r"""/recipes/\d+/\S*/\S*/""")
     @classmethod
 
     def __getText(self, url):
