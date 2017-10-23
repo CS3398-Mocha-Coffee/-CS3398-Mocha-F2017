@@ -6,5 +6,6 @@ public class OilItem extends IngredientItem {
 		refridgerated = false;
 		itemName = "Oil";
 		measurement = "tbsp";
+		category = "OilItem";
 	}
 }

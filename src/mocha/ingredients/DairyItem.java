@@ -5,5 +5,6 @@ public class DairyItem extends IngredientItem {
 	public DairyItem() {
 		parishable = true;
 		refridgerated = true;
+		category = "DairyItem";
 	}
 }

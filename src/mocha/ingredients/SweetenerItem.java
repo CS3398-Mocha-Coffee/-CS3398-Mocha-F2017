@@ -6,5 +6,6 @@ public class SweetenerItem extends IngredientItem {
 		refridgerated = false;
 		itemName = "Sweetener";
 		measurement = "tbsp";
+		category = "SweetenerItem";
 	}
 }

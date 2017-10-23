@@ -6,5 +6,6 @@ public class DessertItem extends IngredientItem {
 		refridgerated = false;
 		itemName = "Dessert Item";
 		measurement = "oz";
+		category = "DessertItem";
 	}
 }

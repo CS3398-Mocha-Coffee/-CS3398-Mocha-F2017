@@ -6,6 +6,7 @@ public class MeatItem extends IngredientItem  {
 		refridgerated = true;
 		measurement = "Lbs";
 		itemName = "Meat Item";
+		category = "MeatItem";
 	}
 
 }

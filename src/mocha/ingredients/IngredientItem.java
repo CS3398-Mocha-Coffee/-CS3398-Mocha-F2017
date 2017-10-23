@@ -6,6 +6,7 @@ public class IngredientItem {
 	protected boolean refridgerated;
 	protected String itemName;
 	protected String measurement = "qty";
+	protected String category;
 	
 	// Getter and Setter methods
 	public boolean isRefridgerated() {
@@ -31,5 +32,8 @@ public class IngredientItem {
 	}
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
+	}
+	public String getCategory() {
+		return this.category;
 	}
 }
