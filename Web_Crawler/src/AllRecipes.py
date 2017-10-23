@@ -4,29 +4,33 @@ import json
 from bs4 import BeautifulSoup
 from Abstract import Abstract
 
+
 class AllRecipes(Abstract):
     __content_pattern = re.compile(r"""/recipes/\d+/\S*/\S*/""")
-    @classmethod
 
-    def __getText(self, url):
+
+    @staticmethod
+    def __getText(url):
         r = requests.get(url)
         return r.text
 
-    def __getContent(self, url):
+    @staticmethod
+    def __getContent(url):
         r = requests.get(url)
         return r.content
 
-    def getRecipe(self, url):
+    @staticmethod
+    def getRecipe(url):
         title = []
         totalTime = []
         cookTime = []
         prepTime = []
 
-        soup = BeautifulSoup(self.__getContent(url), "html.parser") #gets URL one time per function use
+        soup = BeautifulSoup(__getContent(url).__func__(), "html.parser")  # gets URL one time per function use
         title.append(soup.find('h1').get_text())
         totalTime.append(soup.find('span', {'class': 'ready-in-time'}).get_text())
-        cookTime.append(soup.find('time', {'itemprop': 'cookTime'}).get_text())     ##needs error checking (no cook time)
-        prepTime.append(soup.find('time', {'itemprop': 'prepTime'}).get_text())     ##needs error checking (no prep time)
+        cookTime.append(soup.find('time', {'itemprop': 'cookTime'}).get_text())  ##needs error checking (no cook time)
+        prepTime.append(soup.find('time', {'itemprop': 'prepTime'}).get_text())  ##needs error checking (no prep time)
         ###get ingredients
         ingredients = []
         htmlIngredients = soup.findAll('span', {'itemprop': 'ingredients'})
@@ -46,18 +50,20 @@ class AllRecipes(Abstract):
         recipe = [title, totalTime, cookTime, prepTime, ingredients, directions]
         return recipe
 
-    def getDomain(self):
+    @staticmethod
+    def getDomain():
         domains = []
-        content = self.__getText(self.getURL())
-        result = re.findall(self.content_pattern, content)
+        content = __getText(super.getURL()).__func__()
+        result = re.findall(content_pattern, content)
         for domainPath in result:
             if domainPath not in domains:
                 domains.append(domainPath)
         del result
         return domains
 
-    def getRecipeUrls(self, url):
-        soup = BeautifulSoup(self.__getText(url), "html.parser")
+    @staticmethod
+    def getRecipeUrls(url):
+        soup = BeautifulSoup(__getText(url), "html.parser")
         js = json.loads(soup.select_one("script[type=application/ld+json]").text)
         jsUrls = [dct["url"] for dct in js["itemListElement"]]
         return jsUrls
