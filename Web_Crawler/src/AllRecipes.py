@@ -5,16 +5,17 @@ from bs4 import BeautifulSoup
 from Abstract import Abstract
 
 
-class AllRecipes(Abstract):
+class AllRecipes():
     __content_pattern = re.compile(r"""/recipes/\d+/\S*/\S*/""")
+    __url = "www.allrecipes.com"
 
 
-    @staticmethod
+    @classmethod
     def __getText(url):
         r = requests.get(url)
         return r.text
 
-    @staticmethod
+    @classmethod
     def __getContent(url):
         r = requests.get(url)
         return r.content
@@ -53,7 +54,7 @@ class AllRecipes(Abstract):
     @staticmethod
     def getDomain():
         domains = []
-        content = __getText(super.getURL()).__func__()
+        content = __getText(__url).__func__()
         result = re.findall(content_pattern, content)
         for domainPath in result:
             if domainPath not in domains:

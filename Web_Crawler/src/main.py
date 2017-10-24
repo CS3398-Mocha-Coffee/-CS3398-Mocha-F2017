@@ -4,8 +4,8 @@ from pyprogress import *
 import csv
 if __name__ == '__main__':
     allUrls = []
-    x = AllRecipes.AllRecipes("http://www.allrecipes.com")
-    domain_list = x.getDomain()
+    AllRecipes.Abstract.url = "http://www.allrecipes.com"
+      domain_list = AllRecipes.AllRecipes.getDomain()
     #progress bar for crawl:
     pb = ProgressBar(len(domain_list), name = "Crawling AllRecipes.com",
                      timecount=False, completionprediction=True, colored=True)
