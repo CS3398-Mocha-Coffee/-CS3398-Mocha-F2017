@@ -6,8 +6,10 @@ public class Pasta extends recipeClass{
 		prepTime = "10 minutes";
 		cookTime = "10 minutes";
 		totalTime = "20 mintues";
+		favorites = false;
 		
-		ingredients pastaIngre;
-		
+		addItem("spagetti", 12, "oz");
+		addSteps(1, "Boil water");
+		addTags("Italian");
 	}
 }
