@@ -4,8 +4,10 @@ from pyprogress import *
 import csv
 if __name__ == '__main__':
     allUrls = []
-    AllRecipes.Abstract.url = "http://www.allrecipes.com"
-      domain_list = AllRecipes.AllRecipes.getDomain()
+    allRecipes = []
+    x = AllRecipes.AllRecipes("http://www.allrecipes.com")
+    domain_list = x.getDomain()
+    #print(domain_list)
     #progress bar for crawl:
     pb = ProgressBar(len(domain_list), name = "Crawling AllRecipes.com",
                      timecount=False, completionprediction=True, colored=True)
@@ -26,4 +28,3 @@ if __name__ == '__main__':
                 print("Current Recipe: ", recipe)
                 writer.writerow(x.getRecipe(recipe))   ##writes each recipe to a row in csv.
                 time.sleep(1) ##DO NOT REMOVE OR THIS ATTACKS WEBSERVER WITH DOS-Attack
-
