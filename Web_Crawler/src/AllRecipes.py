@@ -31,15 +31,15 @@ class AllRecipes(Abstract):
         try:
             totalTime.append(soup.find('span', {'class': 'ready-in-time'}).get_text())
         except AttributeError:
-            totalTime.append('0')
+            totalTime.append('0 m')
         try:
             cookTime.append(soup.find('time', {'itemprop': 'cookTime'}).get_text())
         except AttributeError:
-            cookTime.append('0')
+            cookTime.append('0 m')
         try:
             prepTime.append(soup.find('time', {'itemprop': 'prepTime'}).get_text())
         except AttributeError:
-            prepTime.append('0')
+            prepTime.append('0 m')
             ###get ingredients
         ingredients = []
         htmlIngredients = soup.findAll('span', {'itemprop': 'ingredients'})
