@@ -3,7 +3,6 @@ import requests
 import json
 from bs4 import BeautifulSoup
 from Abstract import Abstract
-from pprint import pprint
 
 
 class AllRecipes(Abstract):
@@ -25,7 +24,9 @@ class AllRecipes(Abstract):
         prepTime = []
         soup = BeautifulSoup(self.__getContent(url), "html.parser") #gets URL one time per function use
         try:
-            title.append(soup.find('h1').get_text())
+            removeCommas = soup.find('h1').get_text()
+            removeCommas = removeCommas.replace(",", " ")
+            title.append(removeCommas)
         except AttributeError:
             title.append('None')
         try:
