@@ -7,10 +7,8 @@ public class Inventory {
 	private static ArrayList<Double> idNums = new ArrayList<Double>();
 	private static IDatabase data;
 	
-	//public Inventory() throws Exception {
-	public static void main(String[] args) throws Exception {
+	public Inventory() throws Exception {
 		data = new IDatabase();
-		System.out.println(data.getIngredient(1002).getName());
 	}
 	public static void addItem(double itemId, double qty) {
 		if (hasItem(itemId)) {	
