@@ -4,8 +4,10 @@ import AllRecipes
 import sys, time
 import csv
 from pprint import pprint
-from bs4 import BeautifulSoup
+
+
                #(search term, google api key, custom search engine id, other key values)
+
 def googleSearch(search, api_key, cse_id, **kwargs):
     service = build("customsearch", "v1", developerKey=api_key)   #uses custom search engine
     results = service.cse().list(q=search, cx=cse_id, **kwargs).execute()
@@ -52,8 +54,11 @@ def customSearch(searchTerm):
         ingre.close()
         dir.close()
 
-if __name__ == '__main__':
-    customSearch("Spaghetti")
+# if __name__ == '__main__':
+#     try:
+#         customSearch("Spaghetti")
+#     except Exception:
+#         print("Something happened. But the search continues!")
     #please do not add moore custom searches.
     #This is just to show that the function works.
     #will use just the function when importing to JAVA.
