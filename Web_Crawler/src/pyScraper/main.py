@@ -19,6 +19,7 @@ if __name__ == '__main__':
         pb.inc()
     pb.end()
     pathtofile = "c:/Users/Mom/desktop/software engineering/-CS3398-Mocha-F2017/Web_Crawler/src/database/"
+    #opening CSV file
     with open(pathtofile+'recipe times.csv', 'w') as times, \
          open (pathtofile+'recipe ingredients.csv', 'w') as ingre, \
          open (pathtofile+'recipe directions.csv', 'w') as direc:
@@ -26,15 +27,16 @@ if __name__ == '__main__':
         writerTimes = csv.writer(times, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
         writerIngredients = csv.writer(ingre,delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
         writerDirections = csv.writer(direc, delimiter = ',',lineterminator = '\n')
-        #HEADERS
+        #fields
         writerTimes.writerow(['Name', 'Total Time', 'Cook Time', 'Prep Time'])
         writerIngredients.writerow(['Name', 'Ingredients'])
         writerDirections.writerow(['Name', 'Directions'])
         #write to files
         for recipeList in allUrls:
-            for recipe in recipeList:                   #Does not write neatly into csv, need to find fix!
+            for recipe in recipeList:
                 print("Current Recipe: ", recipe)
                 thisRecipe = x.getRecipe(recipe)
+                # thisRecipe[Name,totalTime,CookTime,PrepTime,ingredients, directions]
                 timeslist = [thisRecipe[0],thisRecipe[1],thisRecipe[2],thisRecipe[3]]
                 ingredients = [thisRecipe[0],thisRecipe[4]]
                 directions = [thisRecipe[0], thisRecipe[5]]

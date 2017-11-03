@@ -27,7 +27,7 @@ class AllRecipes(Abstract):
             removeCommas = soup.find('h1').get_text()
             removeCommas = removeCommas.replace(",", " ")
             title.append(removeCommas)
-        except AttributeError:
+        except AttributeError:                          #IN PROCESS OF COMMENTING. Im lazy
             title.append('None')
         try:
             totalTime.append(soup.find('span', {'class': 'ready-in-time'}).get_text())
