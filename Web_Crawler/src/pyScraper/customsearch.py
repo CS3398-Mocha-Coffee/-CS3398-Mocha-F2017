@@ -6,7 +6,7 @@ import csv
 from pprint import pprint
 from bs4 import BeautifulSoup
 
-def googleSearch(search, api_key, cse_id, **kwargs):
+def googleSearch(search, api_key, cse_id, **kwargs):   #(search term, custom search engine id,
     service = build("customsearch", "v1", developerKey=api_key)
     results = service.cse().list(q=search, cx=cse_id, **kwargs).execute()
     return results['items']
@@ -18,10 +18,10 @@ def customSearch(searchTerm):
     scraper = AllRecipes.AllRecipes("http://www.allrecipes.com")
 
     Results = googleSearch(searchTerm, api_key, cse_id)
-    # pprint(testResults)
-    with open('custom times.csv', 'w') as times, \
-         open('custom ingredients.csv', 'w') as ingre, \
-         open('custom directions.csv', 'w') as dir:
+    pathToFile = "c:/Users/Mom/desktop/software engineering/-CS3398-Mocha-F2017/Web_Crawler/src/database/"
+    with open(pathToFile+'custom times.csv', 'w') as times, \
+         open(pathToFile+'custom ingredients.csv', 'w') as ingre, \
+         open(pathToFile+'custom directions.csv', 'w') as dir:
         #writing format to csv
         writerTimes = csv.writer(times, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL,
                                  lineterminator='\n')

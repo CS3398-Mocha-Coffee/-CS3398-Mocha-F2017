@@ -18,8 +18,10 @@ if __name__ == '__main__':
         time.sleep(1) #AllRecipes robots.txt allows crawl-delay: 1
         pb.inc()
     pb.end()
-
-    with open('recipe times.csv', 'w') as times, open ('recipe ingredients.csv', 'w') as ingre, open ('recipe directions.csv', 'w') as direc:
+    pathtofile = "c:/Users/Mom/desktop/software engineering/-CS3398-Mocha-F2017/Web_Crawler/src/database/"
+    with open(pathtofile+'recipe times.csv', 'w') as times, \
+         open (pathtofile+'recipe ingredients.csv', 'w') as ingre, \
+         open (pathtofile+'recipe directions.csv', 'w') as direc:
         #config writer to write in csv
         writerTimes = csv.writer(times, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
         writerIngredients = csv.writer(ingre,delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')

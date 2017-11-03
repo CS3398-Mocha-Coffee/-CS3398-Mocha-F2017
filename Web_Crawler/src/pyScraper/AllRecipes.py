@@ -51,7 +51,10 @@ class AllRecipes(Abstract):
         ##get directions
         directions = []
         ol = soup.find('ol', {'class': 'list-numbers recipe-directions__list'})
-        htmlDirections = ol.findAll('span', {'class': 'recipe-directions__list--item'})
+        try:
+            htmlDirections = ol.findAll('span', {'class': 'recipe-directions__list--item'})
+        except AttributeError:
+            htmlDirections = None
         for item in htmlDirections:
             directions.append(item.text)
             item.next_sibling
