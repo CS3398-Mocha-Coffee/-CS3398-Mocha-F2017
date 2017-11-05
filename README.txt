@@ -15,3 +15,8 @@ I completely restructured the code for the GUI.  I have now added three classes 
 *****TODO: Need to link both the recipe/pantry menu buttons to desired actions with the databases
 
 
+~~~~~~~~~~~~~~~~~~Icon Creator Credit~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+recipe(16, 32, 128): Icon made by David Lanham Freeware non-commercial from www.findicons.com
+recipeBook128: Icon made by Freepik from www.flaticon.com 
+coveredFoodTray(16, 32, 128): Icon made by Freepik from www.flaticon.com 
+pantry128: Icon made by Freepik from www.flaticon.com 
