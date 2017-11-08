@@ -2,11 +2,11 @@
 
 ## To Be Completed:
 - [ ] Design UML, Class Design, Flow of Control 
-- [ ] Create shopping list feature
-- [ ] Create "My Pantry" feature
+- [ ] Complete Shopping List feature
 - [ ] Map out website design
 - [ ] Allow recipes to interact with shopping list
 - [ ] Recipe Search
+- [ ] INTEGRATE CODE
 
 ## Completed:
 - [x] Determine how to approach the create of Ingredients Database
