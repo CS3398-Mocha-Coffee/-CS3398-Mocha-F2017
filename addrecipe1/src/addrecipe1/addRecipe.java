@@ -20,7 +20,7 @@ import javax.swing.JTextField;
 
 public class addRecipe {
 
-	
+	//to handle gui's
 	static JFrame frame1; // for frame
 	static ActionListener listener; //to add action listener
 	static JTextField text1; // for text box
@@ -28,15 +28,12 @@ public class addRecipe {
 	
 	
 	
-	
-	
-	
-	
-	
     //variables 
     char response;
-    String recipeName, prepTime, cookTime, totalTime;
-    int numIngre;
+    String recipeName, prepTime, cookTime, totalTime, weightType;
+    String ingredient, direction;
+    double ingreAmount;
+    int numIngre, numSteps;
     
  
     
@@ -44,7 +41,7 @@ public class addRecipe {
     {
     	
     	
-    	
+    	//to handle future gui build
     	listener = null; // to initialize listener
         final int FIELD_WIDTH = 40; // adds the length of the button
         frame1 = new JFrame(); 	// frame for 1 entry
@@ -73,21 +70,6 @@ public class addRecipe {
     	
     	
     	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
         String filename = "User-Inputted-Recipes.csv"; // to name output file
         PrintWriter file = null;
 
@@ -104,19 +86,8 @@ public class addRecipe {
         while(response == 'y' || response == 'Y' )
         {
             
-      
-            frame1.setVisible(true);
-        	
-        	
-        	
-        	
-        	
-        	
-        	
-        	
-        	
-        	
-        	
+            //frame1.setVisible(true);
+        	  	
         	//asks for the name of the recipe
             System.out.println("\nWhat is the name of this recipe?");
             recipeName = scan.next();
@@ -136,13 +107,14 @@ public class addRecipe {
             totalTime = scan.nextLine();
             
             
-            file.println(recipeName); //prints name of recipe to output file
-            file.println(prepTime); //prints preparation time
-            file.println(cookTime); //prints cook time
+            file.print(recipeName); //prints name of recipe to output file
+            file.print(",");
+            file.print(prepTime); //prints preparation time
+            file.print(",");
+            file.print(cookTime); //prints cook time
+            file.print(",");
             file.println(totalTime); //prints cook time
-            file.println("Ingredients"); // to name when ingredients start
 
-            
             //asks for amount of ingredients for recipe
             System.out.println("\nHow many ingredients are in this recipe?");
             numIngre= scan.nextInt();
@@ -151,14 +123,46 @@ public class addRecipe {
             //for loop to enter all ingredeients into array list.
             for(int x=1; x<=numIngre; x++)
             {
-                System.out.println("Enter ingredient number " + x );
-                String ingredient = scan.next();
+            	System.out.println("Enter ingredient number " + x );
+            	ingredient = scan.next();
 
-         
-                file.println(ingredient); // add ingredient to output file
+            	scan.nextLine();
+                 
+                System.out.println("Enter amount");
+                ingreAmount = scan.nextDouble();
+
+                
+                file.print(ingredient); // add ingredient to output file
+                file.print(",");
+                file.println(ingreAmount); 
+               
+            }
+
+            
+            /*  This adds directions to the recipes. 
+             
+            //asks for amount of number of directions
+            System.out.println("\nHow many steps is this recipe?");
+            numSteps= scan.nextInt();
+            
+   
+            //for loop to enter steps into array list.
+            for(int x=1; x<=numSteps; x++)
+            {
+            	
+             	scan.nextLine();
+            	System.out.println("Enter direction number " + x );
+            	direction = scan.nextLine();
+
+           
+            	
+                file.println(direction); // add directions to output file
                 //System.out.println("you entered" );
             }
 
+            */
+            
+            
             file.println("\n"); // to space out recipes
 
             
@@ -182,9 +186,5 @@ public class addRecipe {
             file.flush();
         }
      }     
-    
-    
-    
-    
-    
+     
 }
