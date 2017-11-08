@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.script.ScriptEngine"/>
+<fullyQualifiedTypeName name="javax.script.ScriptEngineManager"/>
+<fullyQualifiedTypeName name="javax.script.ScriptException"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="org.python.util.PythonInterpreter"/>
+<fullyQualifiedTypeName name="org.python.core.PyInstance"/>
+<fullyQualifiedTypeName name="org.python.core.PyObject"/>
+<fullyQualifiedTypeName name="org.python.core.PyString"/>
+<fullyQualifiedTypeName name="org.python.core.PyException"/>
+</qualifiedTypeNameHistroy>

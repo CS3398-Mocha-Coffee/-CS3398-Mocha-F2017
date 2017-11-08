@@ -1,0 +1,36 @@
+package CustomSearch;
+
+import org.python.core.PyInstance;
+import org.python.core.PyObject;
+import org.python.util.PythonInterpreter;
+
+public class CustomSearch {
+	private static String filepath;
+	private static String function;
+	private static String arg;
+	
+	public static void setFilePath(String pathToScript) {
+		filepath = pathToScript;
+	}
+	
+	public static String getFilePath() {
+		return filepath;
+	}
+	
+	
+	public static void customSearch (String arg) {
+		
+		setFilePath("C:\\Users\\Mom\\Desktop\\Software Engineering\\-CS3398-Mocha-F2017\\Web_Crawler\\src\\pyScraper\\customsearch.py");
+		
+		PythonInterpreter interpreter = new PythonInterpreter();
+	    interpreter.execfile(getFilePath());
+	    PyObject str = interpreter.get("customSearch");
+	    System.out.println(str.toString());
+		
+	}
+	public static void main(String[] args) {
+		customSearch("Noodles");
+	}
+	
+
+}

@@ -1,0 +1,67 @@
+import org.python.core.Py;
+import org.python.core.PyException;
+import org.python.core.PyInstance;
+import org.python.core.PyObject;
+import org.python.core.PyString;
+import org.python.core.__builtin__;
+import org.python.util.PythonInterpreter;
+
+public class JythonScraper {
+	private static String filepath;
+	private static String script;
+	private static String function;
+	private static String arg;
+		
+	public static void setFilePath(String pathToScript) {
+		filepath = pathToScript;
+	}
+	
+	public static void setScriptName(String scriptName) {
+		script = scriptName;
+	}
+	
+	public static void setFunction(String func) {
+		function = func;
+	}
+	
+	public static void setArg(String a) {
+		arg = a;
+	}
+	
+	public static String getFilePath() {
+		return filepath;
+	}
+	
+	public static String getScriptName() {
+		return script;
+	}
+	
+	public static String getFunction() {
+		return function;
+	}
+	
+	public static String getArg() {
+		return arg;
+	}
+	
+	public static void main(String[] args) throws Exception {
+		PythonInterpreter interpreter = new PythonInterpreter();
+		setFilePath("C:\\Users\\Mom\\Desktop\\Software Engineering\\-CS3398-Mocha-F2017\\Web_Crawler\\src");
+		setScriptName("AllRecipes");
+        interpreter.exec("import sys \n" + "import os \n" + "import requests \n" + "import json \n" + "from bs4 import BeautifulSoup \n" + "from Abstract import Abstract \n" + "sys.path.append('" + getFilePath() + "')\n"+ "from "+getScriptName()+" import * \n");
+        interpreter.execfile("AllRecipes.py");
+        PyInstance Class = interpreter.eval("AllRecipes(Abstract)");
+        setFunction("getRecipe");
+        setArg("http://allrecipes.com/recipe/15836/strawberry-pie-ii/");
+        PyObject getRecipe = interpreter.get(getFunction());
+        if (getRecipe == null) 
+        	throw new Exception("Could not find Python function: " + getFunction());
+        try {
+        	getRecipe.__call__(new PyString(getArg()));
+        } catch (PyException e) {
+        	e.printStackTrace();
+        }  
+    }
+	
+
+}

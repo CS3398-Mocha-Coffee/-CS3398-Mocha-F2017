@@ -1,0 +1,54 @@
+import org.python.core.Py;
+import org.python.core.PyException;
+import org.python.core.PyInstance;
+import org.python.core.PyObject;
+import org.python.core.PyString;
+import org.python.core.__builtin__;
+import org.python.util.PythonInterpreter;
+
+public class JythonScraper {
+	private static String filepath;
+	private static String script;
+	private static String function;
+	private static String arg;
+		
+	public static void setFilePath(String pathToScript) {
+		filepath = pathToScript;
+	}
+	
+	public static void setScriptName(String scriptName) {
+		script = scriptName;
+	}
+	
+	public static void setFunction(String func) {
+		function = func;
+	}
+	
+	public static void setArg(String a) {
+		arg = a;
+	}
+	
+	public static String getFilePath() {
+		return filepath;
+	}
+	
+	public static String getScriptName() {
+		return script;
+	}
+	
+	public static String getFunction() {
+		return function;
+	}
+	
+	public static String getArg() {
+		return arg;
+	}
+	
+	public static void main(String[] args) throws Exception {
+		PythonInterpreter interpreter = new PythonInterpreter();
+		setFilePath("C:\\Users\\Mom\\Desktop\\Software Engineering\\-CS3398-Mocha-F2017\\Web_Crawler\\src\\main.py");
+		
+    }
+	
+
+}

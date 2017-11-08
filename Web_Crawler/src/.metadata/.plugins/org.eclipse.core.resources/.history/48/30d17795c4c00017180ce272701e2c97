@@ -1,0 +1,71 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
+
+import org.python.util.PythonInterpreter;
+
+public class JythonScraper {
+	private static String filepath;
+	private static String script;
+	private static String function;
+	private static String arg;
+		
+	public static void setFilePath(String pathToScript) {
+		filepath = pathToScript;
+	}
+	
+	public static void setScriptName(String scriptName) {
+		script = scriptName;
+	}
+	
+	public static void setFunction(String func) {
+		function = func;
+	}
+	
+	public static void setArg(String a) {
+		arg = a;
+	}
+	
+	public static String getFilePath() {
+		return filepath;
+	}
+	
+	public static String getScriptName() {
+		return script;
+	}
+	
+	public static String getFunction() {
+		return function;
+	}
+	
+	public static String getArg() {
+		return arg;
+	}
+	
+	public static void main(String[] args) throws Exception {
+		try {
+			
+			PythonInterpreter interpreter = new PythonInterpreter();
+			setFilePath("C:\\Users\\Mom\\Desktop\\Software Engineering\\-CS3398-Mocha-F2017\\Web_Crawler\\src\\main.py");
+			String pythonPath = "C:/python34/python";
+			ProcessBuilder pb = new ProcessBuilder(Arrays.asList(pythonPath, getFilePath()));
+			Process p = pb.start();
+			
+			BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			String line = "";
+			System.out.println("Running Python: " + line);
+			line = bfr.readLine();
+			System.out.println("First Line: " + line);
+			while((line = bfr.readLine()) != null) {
+				System.out.println("Python Output: " + line);
+				TimeUnit.SECONDS.sleep(1);
+			}
+			
+			System.out.print("------------------FINISHED------------------");
+		}catch(Exception e) {System.out.println(e);}
+		
+    }
+	
+
+}

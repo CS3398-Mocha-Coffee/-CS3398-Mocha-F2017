@@ -1,0 +1,30 @@
+package CustomSearch;
+
+import org.python.core.PyInstance;
+import org.python.util.PythonInterpreter;
+
+public class CustomSearch {
+	private static String filepath;
+	private static String function;
+	private static String arg;
+	
+	public static void setFilePath(String pathToScript) {
+		filepath = pathToScript;
+	}
+	
+	public static String getFilePath(String pathToScript) {
+		return filepath
+	}
+	
+	
+	public static void customSearch (String arg) {
+		
+		PythonInterpreter interpreter = new PythonInterpreter();
+	    interpreter.execfile("/pathtoyourmodule/somme_x_y.py");
+	    PyObject str = interpreter.eval("repr(somme(4,5))");
+	    System.out.println(str.toString());
+		
+	}
+	
+
+}
