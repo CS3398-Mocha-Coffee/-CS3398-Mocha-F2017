@@ -138,6 +138,7 @@ public class recipeMenu extends JFrame
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
+				recipeAddMenu addObject = new recipeAddMenu();
 			}
 		});
 		

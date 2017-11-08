@@ -10,6 +10,7 @@ import java.awt.Toolkit;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -122,6 +123,8 @@ public class pantryMenu extends JFrame {
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
+				///add in display here
+				JOptionPane.showMessageDialog(null, "Hi Brian");
 			}
 		});
 		/*
