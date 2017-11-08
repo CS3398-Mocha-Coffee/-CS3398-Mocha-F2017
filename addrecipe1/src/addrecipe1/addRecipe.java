@@ -20,7 +20,7 @@ import javax.swing.JTextField;
 
 public class addRecipe {
 
-	//to handle gui's
+	//to handle future gui's
 	static JFrame frame1; // for frame
 	static ActionListener listener; //to add action listener
 	static JTextField text1; // for text box
