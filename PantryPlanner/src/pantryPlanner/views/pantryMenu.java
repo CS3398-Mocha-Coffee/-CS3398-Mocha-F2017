@@ -54,13 +54,11 @@ public class pantryMenu extends JFrame {
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(pantryMenu.class.getResource("/pantryPlanner/resources/pantry128.png")));
 		
+		//button block
 		b_addRemove = new JButton("ADD/REMOVE");
-		b_addRemove.setBorder(null);
-		
+		b_addRemove.setBorder(null);		
 		b_edit = new JButton("EDIT PANTRY");
-		
-		b_display = new JButton("DISPLAY ");
-		
+		b_display = new JButton("DISPLAY ");		
 		b_return = new JButton("RETURN");
 
 		GroupLayout gl_ctpPantry = new GroupLayout(ctpPantry);
@@ -106,7 +104,7 @@ public class pantryMenu extends JFrame {
 
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// createEventsPantry: has all code for creating events
+	// createEventsPantry: has all action listeners for creating events
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	private void createEventsPantry() 
 	{
@@ -115,6 +113,33 @@ public class pantryMenu extends JFrame {
 			public void actionPerformed(ActionEvent e) 
 			{
 				dispose();
+			}
+		});
+		/*
+		 * integrate display function here
+		 */
+		b_display.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+			}
+		});
+		/*
+		 * integrate edit function here
+		 */
+		b_edit.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+			}
+		});
+		/*
+		 * integrate add/remove function here
+		 */
+		b_addRemove.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 			}
 		});
 		

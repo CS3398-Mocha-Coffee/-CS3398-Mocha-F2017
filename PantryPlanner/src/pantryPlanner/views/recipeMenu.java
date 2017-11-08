@@ -54,12 +54,13 @@ public class recipeMenu extends JFrame
 		JLabel l_RecipeGreeting = new JLabel("");
 		l_RecipeGreeting.setIcon(new ImageIcon(recipeMenu.class.getResource("/pantryPlanner/resources/recipeBook128.png")));
 		
-		b_add = new JButton("ADD RECIPE");
-		
-		b_remove = new JButton("REMOVE RECIPE");
-		
-		b_search = new JButton(" SEARCH RECIPE");
-		
+		//button block
+		b_add = new JButton("ADD RECIPE");		
+
+		b_remove = new JButton("REMOVE RECIPE");		
+
+		b_search = new JButton(" SEARCH RECIPE");		
+
 		b_return = new JButton("RETURN");
 
 		GroupLayout gl_ctpRecipe = new GroupLayout(ctpRecipe);
@@ -101,7 +102,7 @@ public class recipeMenu extends JFrame
 	}	
 	
 	//////////////////////////////////////////////////////////////////////////
-	// createEvents: has all code for creating events
+	// createEvents: has all action listeners for creating events
     //////////////////////////////////////////////////////////////////////////
 	private void createEventsRecipe() 
 	{
@@ -110,6 +111,33 @@ public class recipeMenu extends JFrame
 			public void actionPerformed(ActionEvent e) 
 			{
 				dispose();
+			}
+		});
+		/*
+		 * integrate search function here
+		 */
+		b_search.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+			}
+		});
+		/*
+		 * integrate remove function here
+		 */
+		b_remove.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+			}
+		});
+		/*
+		 * integrate add function here
+		 */
+		b_add.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 			}
 		});
 		
