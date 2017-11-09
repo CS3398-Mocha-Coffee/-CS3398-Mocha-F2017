@@ -14,4 +14,5 @@
 - [x] Create Ingredients Database
 - [x] Web Crawl/Scrape into database
 - [x] Recipe Search
+- [x] Custom Recipe code successfully integrated (Abel & Arthur)
 
