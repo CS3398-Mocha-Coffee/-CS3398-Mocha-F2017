@@ -1,0 +1,94 @@
+!SESSION 2017-11-08 19:25:30.223 -----------------------------------------------
+eclipse.buildId=4.7.1.M20170906-1700
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-11-08 19:28:26.900
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java overlaps the workspace location: C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-11-08 19:28:26.901
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-11-08 19:28:26.901
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-11-08 19:28:26.901
+!MESSAGE C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java overlaps the workspace location: C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2017-11-08 19:28:29.078
+!MESSAGE No repository found at http://www.pydev.org.
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-11-08 19:28:37.325
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java overlaps the workspace location: C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-11-08 19:28:37.325
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-11-08 19:28:37.325
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-11-08 19:28:37.325
+!MESSAGE C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java overlaps the workspace location: C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-11-08 19:28:42.230
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java overlaps the workspace location: C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-11-08 19:28:42.232
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-11-08 19:28:42.232
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-11-08 19:28:42.232
+!MESSAGE C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java overlaps the workspace location: C:\Users\Mom\Desktop\Software Engineering\-CS3398-Mocha-F2017\Web_Crawler\src\Python in Java
