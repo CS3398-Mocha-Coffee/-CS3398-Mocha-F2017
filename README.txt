@@ -5,10 +5,10 @@ Pantry Planner is a desktop application that gives the user real-time access to 
 
 
 ***PANTRY UPDATES***
-
+UPDATE - 08NOV2017 Pantry code integrated and now in Pantry Planner on the development branch.
 
 ***RECIPE UPDATES***
-
+UPDATE - 08NOV2017 Recipe database built out and ready for intergration.  Web scrapper and parsing program is now in the development branch.
 
 ***GUI UPDATES***
 UPDATE - 08NOV2017 I added action listeners to all buttons for integration. I have also added a package pantryPlanner.databases this is where databases will go for the app.
