@@ -1,7 +1,6 @@
 package CustomSearch;
 
 import org.python.core.PyException;
-import org.python.core.PyInstance;
 import org.python.core.PyObject;
 import org.python.core.PyString;
 import org.python.util.PythonInterpreter;
@@ -21,14 +20,22 @@ public class CustomSearch {
 	
 	
 	public static void customSearch (String arg) throws Exception {
-		//FOR DEMO: SET FILEPATH TO YOUR COPY OF "customsearch.py"
+		//FOR Integration: Download PyDev package in eclipse
+		
+		/*FOR Integration: JYTHON
+		  1) Go to Eclipse preferences and search 'Jython' in filter
+		  2) click on 'Jython Interpreter'
+		  3) click 'New'
+		  4) *Interpreter Name: call it what you want
+		     *Interpreter Executable: jython2.7.1b3/jython.jar
+		  5) Click 'Apply' 
+		*/
+		
+		//FOR Integration: SET FILEPATH TO YOUR COPY OF "customsearch.py"
 		setFilePath("C:\\Users\\Mom\\Desktop\\Software Engineering\\-CS3398-Mocha-F2017\\Web_Crawler\\src\\pyScraper\\customsearch.py");
-		//FOR DEMO: Install Jython 2.7.1b3 
-		//put all outside modules inside of jython2.7.1b3/Lib/site-packages
-		//I will try to implement so that you do not have to do this. 
 		PythonInterpreter interpreter = new PythonInterpreter();
 	    interpreter.execfile(getFilePath());
-	    PyObject cSearch = interpreter.get("customSearch");
+	    PyObject cSearch = interpreter.get("customSearch"); //name of the Python function
 	    if (cSearch == null) {
             throw new Exception("Could not find Python function: " + cSearch);
         }
@@ -38,9 +45,11 @@ public class CustomSearch {
 	    	e.printStackTrace();
 	    }
 	    
+	    interpreter.close();
+	    
 	}
 	public static void main(String[] args) throws Exception {
-		customSearch("Noodles");
+		customSearch("Spaghetti");    
 	}
 	
 
