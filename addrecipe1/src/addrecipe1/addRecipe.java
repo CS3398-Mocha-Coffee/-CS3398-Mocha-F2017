@@ -128,7 +128,7 @@ public class addRecipe {
 
             	scan.nextLine();
                  
-                System.out.println("Enter amount");
+                System.out.println("Enter amount(will be based on type of ingredient)");
                 ingreAmount = scan.nextDouble();
 
                 
@@ -139,7 +139,7 @@ public class addRecipe {
             }
 
             
-            /*  This adds directions to the recipes. 
+            // This adds directions to the recipes. 
              
             //asks for amount of number of directions
             System.out.println("\nHow many steps is this recipe?");
@@ -160,7 +160,7 @@ public class addRecipe {
                 //System.out.println("you entered" );
             }
 
-            */
+            
             
             
             file.println("\n"); // to space out recipes
