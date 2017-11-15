@@ -7,6 +7,7 @@ from Abstract import Abstract
 
 class AllRecipes(Abstract):
     content_pattern = re.compile(r"""/recipes/\d+/\S*/\S*/""")
+    quantity_pattern = re.compile(r"([\d+][\s]\w+|[\d+]|[.]|[/]|[?()])")
     @classmethod
 
     def __getText(self, url):
@@ -25,7 +26,7 @@ class AllRecipes(Abstract):
         soup = BeautifulSoup(self.__getContent(url), "html.parser") #gets URL one time per function use
         try:
             removeCommas = soup.find('h1').get_text()
-            removeCommas = removeCommas.replace(",", " ")
+            removeCommas = removeCommas.replace(",", "")
             title.append(removeCommas)
         except AttributeError:                          #IN PROCESS OF COMMENTING. Im lazy
             title.append('None')
@@ -45,7 +46,12 @@ class AllRecipes(Abstract):
         ingredients = []
         htmlIngredients = soup.findAll('span', {'itemprop': 'ingredients'})
         for i in htmlIngredients:
-            ingredients.append(i.text)
+            ingredient = i.get_text()
+            ingredient = ingredient.replace(",", "")
+            quantity = re.match(self.quantity_pattern, ingredient).group()
+            item = re.sub(self.quantity_pattern, "", ingredient)
+            ingredients.append(quantity)
+            ingredients.append(item)
             i.next_sibling
         del htmlIngredients
         ##get directions
