@@ -1,5 +1,5 @@
 
-package addRecipe;
+package addRecipe.src.addRecipe;
 
 import java.io.IOException;
 import java.io.PrintWriter;
