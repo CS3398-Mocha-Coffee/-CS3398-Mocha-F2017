@@ -7,7 +7,11 @@ from Abstract import Abstract
 
 class AllRecipes(Abstract):
     content_pattern = re.compile(r"""/recipes/\d+/\S*/\S*/""")
-    quantity_pattern = re.compile(r"([\d+][\s]\w+|[\d+]|[.]|[/]|[?()])")
+    quantity_pattern = re.compile(r"[\d+]\s|\bpound\b|\bpounds\b|\bcup\b|\bcups\b| \
+                                  \bOunce\b|\bounce\b|\bOunces\b|\bounces\b|\bcloves\b| \
+                                  \binch\b|\btablespoons\b|\bteaspoons\b|\bgrams\b| \
+                                  \bkilograms\b|\bteaspoon\b|\btablespoon\b|\bfluid ounce\b| \
+                                  \bliter\b|\bgallon\b|\bpint\b|[\d+?/]|[\d+[\.]|[?\(\)]|\bcans\b|\b\can\b")
     @classmethod
 
     def __getText(self, url):
@@ -44,14 +48,29 @@ class AllRecipes(Abstract):
             prepTime.append('0 m')
             ###get ingredients
         ingredients = []
+        quantities = []
         htmlIngredients = soup.findAll('span', {'itemprop': 'ingredients'})
+        #ingredients/quantity parser
         for i in htmlIngredients:
-            ingredient = i.get_text()
-            ingredient = ingredient.replace(",", "")
-            quantity = re.match(self.quantity_pattern, ingredient).group()
-            item = re.sub(self.quantity_pattern, "", ingredient)
-            ingredients.append(quantity)
-            ingredients.append(item)
+            try:  # traverses ingredients list
+                ingredient = i.get_text()
+                ingredient = ingredient.replace(",", "")
+                quantity = ""
+                for match in re.finditer(self.quantity_pattern, ingredient):
+                    if (quantity.endswith(')')):  #weird things were happening with ')'
+                        quantity += " "
+                        quantity += match.group()
+                    else:
+                        quantity += match.group()
+                        quantity += ""
+                quantity.strip()
+
+                item = ingredient.replace(quantity, "").strip()
+                i.next_sibling
+                quantities.append(quantity)
+                ingredients.append(item)
+            except AttributeError:
+                None
             i.next_sibling
         del htmlIngredients
         ##get directions
@@ -66,7 +85,7 @@ class AllRecipes(Abstract):
             item.next_sibling
         del htmlDirections
         ##Place recipe attributes into recipe [] in order of database fields
-        recipe = [title, totalTime, cookTime, prepTime, ingredients, directions]
+        recipe = [title, totalTime, cookTime, prepTime, ingredients, directions, quantities]
         return recipe
 
     def getDomain(self):
