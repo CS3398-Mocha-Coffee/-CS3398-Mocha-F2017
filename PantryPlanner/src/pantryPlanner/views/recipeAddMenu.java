@@ -19,6 +19,9 @@ import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.JSeparator;
 import javax.swing.JTextArea;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JRadioButton;
 
 public class recipeAddMenu extends JFrame {
 
@@ -26,7 +29,9 @@ public class recipeAddMenu extends JFrame {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
-	private JTextField textField_3;
+	private JButton b_AddInfo;
+	private JButton b_AddIng;
+	private JButton b_AddDir;
 
 
 	/**
@@ -51,122 +56,121 @@ public class recipeAddMenu extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JLabel lblNewLabel = new JLabel("RECIPE NAME");
-		lblNewLabel.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		JLabel l_RecipeName = new JLabel("RECIPE NAME");
+		l_RecipeName.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
 		textField = new JTextField();
 		textField.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		textField.setColumns(10);
 		
-		JLabel lblCookTimemin = new JLabel("COOK TIME (min)");
-		lblCookTimemin.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		JLabel l_CookTime = new JLabel("COOK TIME (min)");
+		l_CookTime.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
 		textField_1 = new JTextField();
 		textField_1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		textField_1.setColumns(10);
 		
-		JLabel lblPrepTimemin = new JLabel("PREP TIME (min)");
-		lblPrepTimemin.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		JLabel l_PrepTime = new JLabel("PREP TIME (min)");
+		l_PrepTime.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
 		textField_2 = new JTextField();
 		textField_2.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		textField_2.setColumns(10);
 		
-		JLabel lblTotalTimemin = new JLabel("TOTAL TIME (min)");
-		lblTotalTimemin.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		JLabel l_Category = new JLabel("CATEGORY");
+		l_Category.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
-		textField_3 = new JTextField();
-		textField_3.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		textField_3.setColumns(10);
-		
-		JLabel lblCategory = new JLabel("CATEGORY");
-		lblCategory.setFont(new Font("SansSerif", Font.PLAIN, 12));
-		
-		JComboBox comboBox = new JComboBox();
-		
-		JButton btnAdd = new JButton("ADD");
+		//button block
+		b_AddInfo = new JButton("ADD");
+		b_AddIng = new JButton("ADD");
+		b_AddDir = new JButton("ADD");
+
 		
 		JSeparator separator = new JSeparator();
 		
-		JLabel lblIngredents = new JLabel("INGREDIENTS");
-		lblIngredents.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		JLabel l_Ingredents = new JLabel("INGREDIENTS");
+		l_Ingredents.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
 		JTextArea textArea = new JTextArea();
 		textArea.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		
 		JSeparator separator_1 = new JSeparator();
 		
-		JLabel lblDirections = new JLabel("DIRECTIONS");
-		lblDirections.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		JLabel l_Directions = new JLabel("DIRECTIONS");
+		l_Directions.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
 		JTextArea textArea_1 = new JTextArea();
 		textArea_1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		
-		JButton button = new JButton("ADD");
+		JRadioButton rdb_Breakfast = new JRadioButton("Breakfast");
+		rdb_Breakfast.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
-		JButton button_1 = new JButton("ADD");
+		JRadioButton rdb_Dinner = new JRadioButton("Dinner");
+		rdb_Dinner.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
-		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(recipeAddMenu.class.getResource("/pantryPlanner/resources/coveredFoodTray32.png")));
+		JRadioButton rdb_Lunch = new JRadioButton("Lunch");
+		rdb_Lunch.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		
+		JRadioButton rdb_Any = new JRadioButton("Any");
+		rdb_Any.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
+						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPane.createSequentialGroup()
-									.addComponent(lblIngredents)
+									.addComponent(l_Ingredents)
 									.addGap(18)
 									.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 555, GroupLayout.PREFERRED_SIZE))
-								.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
-									.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
-										.addComponent(lblCategory)
-										.addGap(18)
-										.addComponent(comboBox, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-										.addGap(303)
-										.addComponent(btnAdd, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE))
-									.addComponent(separator, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 652, GroupLayout.PREFERRED_SIZE)))
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+									.addComponent(b_AddInfo, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
+									.addComponent(separator, GroupLayout.PREFERRED_SIZE, 652, GroupLayout.PREFERRED_SIZE)
+									.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+										.addComponent(l_PrepTime, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)
+										.addPreferredGap(ComponentPlacement.UNRELATED)
+										.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE))
+									.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+										.addComponent(l_CookTime)
+										.addPreferredGap(ComponentPlacement.UNRELATED)
+										.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE))))
 							.addGap(12))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
-								.addGroup(gl_contentPane.createSequentialGroup()
-									.addComponent(lblNewLabel)
-									.addPreferredGap(ComponentPlacement.UNRELATED)
-									.addComponent(textField))
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 								.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
-									.addComponent(lblCookTimemin)
+									.addComponent(l_RecipeName)
 									.addPreferredGap(ComponentPlacement.UNRELATED)
-									.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
-									.addGap(18)
-									.addComponent(lblPrepTimemin, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)
-									.addPreferredGap(ComponentPlacement.UNRELATED)
-									.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
-									.addGap(18)
-									.addComponent(lblTotalTimemin)
-									.addGap(10)
-									.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)))
-							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-							.addComponent(label, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
-							.addGap(29))))
+									.addComponent(textField, GroupLayout.PREFERRED_SIZE, 333, GroupLayout.PREFERRED_SIZE))
+								.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+									.addComponent(l_Category)
+									.addGap(76)
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+										.addComponent(rdb_Breakfast)
+										.addComponent(rdb_Dinner, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE))
+									.addGap(46)
+									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+										.addComponent(rdb_Any, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE)
+										.addComponent(rdb_Lunch, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE))))
+							.addContainerGap(240, Short.MAX_VALUE))))
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap(12, Short.MAX_VALUE)
-					.addComponent(lblDirections, GroupLayout.PREFERRED_SIZE, 79, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(15, Short.MAX_VALUE)
+					.addComponent(l_Directions, GroupLayout.PREFERRED_SIZE, 79, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(textArea_1, GroupLayout.PREFERRED_SIZE, 555, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
 					.addComponent(separator_1, GroupLayout.PREFERRED_SIZE, 652, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(12, Short.MAX_VALUE))
+					.addContainerGap(15, Short.MAX_VALUE))
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap(580, Short.MAX_VALUE)
-					.addComponent(button, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(583, Short.MAX_VALUE)
+					.addComponent(b_AddIng, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap(580, Short.MAX_VALUE)
-					.addComponent(button_1, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(583, Short.MAX_VALUE)
+					.addComponent(b_AddDir, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
@@ -176,38 +180,46 @@ public class recipeAddMenu extends JFrame {
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblNewLabel)
+								.addComponent(l_RecipeName)
 								.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 							.addGap(18)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblCookTimemin, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
-								.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblPrepTimemin, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
-								.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblTotalTimemin, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
-								.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-						.addComponent(label))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblCategory, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
-						.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnAdd))
+								.addComponent(l_Category, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
+								.addComponent(rdb_Breakfast)
+								.addComponent(rdb_Lunch, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(l_CookTime, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
+								.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addGap(18)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(l_PrepTime, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
+								.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(18)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(b_AddInfo)
+								.addComponent(rdb_Dinner, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(18)
+							.addComponent(rdb_Any, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)))
 					.addGap(18)
 					.addComponent(separator, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblIngredents, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
+						.addComponent(l_Ingredents, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
 						.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 189, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(button)
+					.addComponent(b_AddIng)
 					.addGap(8)
 					.addComponent(separator_1, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblDirections, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
+						.addComponent(l_Directions, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
 						.addComponent(textArea_1, GroupLayout.PREFERRED_SIZE, 189, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(button_1)
+					.addComponent(b_AddDir)
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
@@ -219,7 +231,29 @@ public class recipeAddMenu extends JFrame {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	private void createEventsAdd() 
 	{
+		b_AddInfo.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				//add methods
+			}
+		});
 		
+		b_AddIng.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				//add methods
+			}
+		});
+		
+		b_AddDir.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				//add methods
+			}
+		});
 	}
 }//end recipeAddMenu
 

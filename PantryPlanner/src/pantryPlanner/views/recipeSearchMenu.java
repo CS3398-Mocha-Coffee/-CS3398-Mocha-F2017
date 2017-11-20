@@ -17,12 +17,15 @@ import javax.swing.JTextPane;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import javax.swing.border.BevelBorder;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class recipeSearchMenu extends JFrame 
 {
 
 	private JPanel contentPane;
 	private JTextField textField;
+	private JButton b_Search;
 
 	/**
 	 * Create the frame.
@@ -55,7 +58,9 @@ public class recipeSearchMenu extends JFrame
 		JTextPane textPane = new JTextPane();
 		textPane.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		
-		JButton btnSearch = new JButton("SEARCH");
+		//button block
+		b_Search = new JButton("SEARCH");
+
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -68,7 +73,7 @@ public class recipeSearchMenu extends JFrame
 							.addPreferredGap(ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
 							.addComponent(textField, GroupLayout.PREFERRED_SIZE, 237, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(btnSearch)))
+							.addComponent(b_Search)))
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
@@ -78,7 +83,7 @@ public class recipeSearchMenu extends JFrame
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblEnterRecipe, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
 						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnSearch))
+						.addComponent(b_Search))
 					.addGap(18)
 					.addComponent(textPane, GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
 		);
@@ -89,7 +94,13 @@ public class recipeSearchMenu extends JFrame
 
 	private void createEventsSearch() 
 	{
-		// TODO Auto-generated method stub
+		b_Search.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				//add methods here
+			}
+		});
 		
 	}
 }//end class recipeSearchMenu

@@ -16,11 +16,14 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.border.BevelBorder;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class recipeRemoveMenu extends JFrame 
 {
 	private JPanel contentPane;	
 	private JTextField textField;
+	private JButton b_Find;
 
 	/**
 	 * Create the frame.
@@ -57,7 +60,10 @@ public class recipeRemoveMenu extends JFrame
 		textField.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		textField.setColumns(10);
 		
-		JButton btnFind = new JButton("FIND");
+		//button block
+		b_Find = new JButton("FIND");
+
+		b_Find.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -66,7 +72,7 @@ public class recipeRemoveMenu extends JFrame
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 244, GroupLayout.PREFERRED_SIZE)
 					.addGap(12)
-					.addComponent(btnFind)
+					.addComponent(b_Find)
 					.addContainerGap())
 				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
 					.addComponent(label)
@@ -80,7 +86,7 @@ public class recipeRemoveMenu extends JFrame
 					.addPreferredGap(ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblEnterRecipe)
-						.addComponent(btnFind)
+						.addComponent(b_Find)
 						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(25))
 		);
@@ -94,7 +100,10 @@ public class recipeRemoveMenu extends JFrame
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	private void createEventsRemove() 
 	{
-
+		b_Find.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		
 	}
 }// end of recipeRemoveMenu
