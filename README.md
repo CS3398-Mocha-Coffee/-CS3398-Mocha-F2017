@@ -11,6 +11,9 @@ UPDATE - 08NOV2017 Pantry code integrated and now in Pantry Planner on the devel
 UPDATE - 08NOV2017 Recipe database built out and ready for intergration.  Web scrapper and parsing program is now in the development branch.
 
 ***GUI UPDATES***
+UPDATE - 20NOV2017 Met up with Arthur and laid out the plan for combinding the recipe database and methods into the GUI.
+Added action listeners and changed category from a pull down to 4 radio buttons.
+
 UPDATE - 19NOV2017 I added the frames for Recipe: Add, Remove and Search.  I will add in the action listeners when I link up each frame and button/s.
 
 UPDATE - 08NOV2017 I added action listeners to all buttons for integration. I have also added a package pantryPlanner.databases this is where databases will go for the app.
