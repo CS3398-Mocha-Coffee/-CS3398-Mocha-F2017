@@ -1,467 +1,469 @@
-100000,Butter,tbsp,,,
-100100,Eggs,oz,,,
-100200,Milk,cups,,,
-100201,1% Milk,cups,,,
-100202,2% Milk,cups,,,
-100203,Whole,cups,,,
-100204,Fat-free,cups,,,
-100205,Half and half,cups,,,
-100206,Whipping cream,cups,,,
-100300,Coffee creamer,cups,,,
-100400,Cheese,oz,,,
-100401,Parmesan,oz,,,
-100402,Cheddar,oz,,,
-100403,Cream cheese,oz,,,
-100404,Mozzarella,oz,,,
-100405,American,oz,,,
-100406,Monterey jack,oz,,,
-100407,Cottage cheese,oz,,,
-100408,"Goat cheese""",oz,,,
-100409,Feta,oz,,,
-100410,Swiss,oz,,,
-100411,Blue,oz,,,
-100412,Colby,oz,,,
-100413,Pepper jack,oz,,,
-100414,Gouda,oz,,,
-100415,Romano,oz,,,
-100416,Brie,oz,,,
-100417,Gruyere,oz,,,
-100418,Havarti,oz,,,
-100419,Queso,oz,,,
-100420,Fresco,oz,,,
-100421,Asiago,oz,,,
-100422,Mascarpone,oz,,,
-100423,Muenster,oz,,,
-100424,Velveeta,oz,,,
-100425,Ricotta,oz,,,
-100500,Yogurt,oz,,,
-100600,Greek yogurt,oz,,,
-110000,Soy milk,cups,,,
-110100,Coconut Milk,cups,,,
-110200,Hemp Milk,cups,,,
-110300,Almond Milk,cups,,,
-110400,Cashew Milk,cups,,,
-120000,Asparagus,qty,,,
-120100,Zucchini,qty,,,
-120200,Yellow squash,qty,,,
-120300,Pumpkin,qty,,,
-120400,Cucumber,qty,,,
-120500,Pickle,qty,,,
-120600,Garlic,qty,,,
-120700,Onion,qty,,,
-120701,Yellow Onion,qty,,,
-120702,White Onion,qty,,,
-120703,Sweet Onion,qty,,,
-120704,Red Onion,qty,,,
-120800,Scallion,qty,,,
-120900,Shallot,qty,,,
-121000,Tomato,qty,,,
-121100,Potato,qty,,,
-121101,Russet Potatoes,qty,,,
-121102,Sweet Potatoes,qty,,,
-121103,Red Potatoes,qty,,,
-121104,Golden Potatoes,qty,,,
-121200,Salad greens,qty,,,
-121300,Carrots,qty,,,
-121400,Olives,qty,,,
-121500,Ginger,qty,,,
-121600,Beet,qty,,,
-121700,Cauliflower,qty,,,
-121800,Mushroom,qty,,,
-121900,Corn,qty,,,
-122000,Spinach,qty,,,
-122100,Kale,qty,,,
-122200,Green beans,qty,,,
-122300,Celery,qty,,,
-122400,Rhubarb,qty,,,
-122500,Cabbage,qty,,,
-122600,Brussel sprouts,qty,,,
-122700,Horseradish,qty,,,
-122800,Radishes,qty,,,
-122900,Sun dried tomatoes,qty,,,
-123000,Bell pepper,qty,,,
-123100,Chili pepper,qty,,,
-123200,Avocado,qty,,,
-123300,Peas,qty,,,
-123400,Snap peas,qty,,,
-123500,Jicama,qty,,,
-123600,Fresh Herbs,oz,,,
-123601,Cilantro,oz,,,
-123602,Basil,oz,,,
-123603,Mint,oz,,,
-123604,Oregano,oz,,,
-123605,Thyme,oz,,,
-123606,Dill,oz,,,
-123607,Rosemary,oz,,,
-123608,Parsley,oz,,,
-130000,Lemon,qty,,,
-130100,Lime,qty,,,
-130200,Orange,qty,,,
-130300,Tangerine,qty,,,
-130400,Clementine,qty,,,
-130500,Tangelos,qty,,,
-130600,Kumquat,qty,,,
-130700,Grapefruit,qty,,,
-130800,Apple,qty,,,
-130900,Pear,qty,,,
-131000,Apricot,qty,,,
-131100,Peach,qty,,,
-131200,Plum,qty,,,
-131300,Banana,qty,,,
-131400,Mango,qty,,,
-131500,Pineapple,qty,,,
-131600,Strawberries,qty,,,
-131700,Blueberries,qty,,,
-131800,Currant,qty,,,
-131900,Raspberries,qty,,,
-132000,Blackberries,qty,,,
-132100,Cranberries,qty,,,
-132200,Cherry,qty,,,
-132300,Lingonberry,qty,,,
-132400,Lychee,qty,,,
-132500,Watermelon,qty,,,
-132600,Honeydew,qty,,,
-132700,Cantaloupe,qty,,,
-132800,Grape,qty,,,
-132900,Prunes,qty,,,
-133000,Raisins,qty,,,
-133100,Papaya,qty,,,
-133200,Pomegranate,qty,,,
-133300,Passion fruit,qty,,,
-133400,Persimmons,qty,,,
-133500,Guava,qty,,,
-133600,Star fruit,qty,,,
-133700,Kiwi,qty,,,
-133800,Fig,qty,,,
-140000,Red pepper flakes,tsp,,,
-140100,Paprika,tsp,,,
-140200,Chili powder,tsp,,,
-140300,Chive,tsp,,,
-140400,Garlic powder,tsp,,,
-140500,Onion powder,tsp,,,
-140600,Oregano,tsp,,,
-140700,Cinnamon,tsp,,,
-140800,Vanilla,tsp,,,
-140900,Cacao,tsp,,,
-141000,Nutmeg,tsp,,,
-141100,Clove,tsp,,,
-141200,Cumin,tsp,,,
-141300,Italian seasoning,tsp,,,
-141400,Thyme,tsp,,,
-141500,Peppercorn,tsp,,,
-141600,Curry powder,tsp,,,
-141700,Bay leaf,tsp,,,
-141800,Sage,tsp,,,
-141900,Chinese five spice,tsp,,,
-142000,Allspice,tsp,,,
-142100,Turmeric,tsp,,,
-142200,Ground coriander,tsp,,,
-142300,Coriander,tsp,,,
-142400,Celery salt,tsp,,,
-142500,Tarragon,tsp,,,
-142600,Cardamom,tsp,,,
-142700,Celery seed,tsp,,,
-142800,Mustard seed,tsp,,,
-142900,Dill seed,tsp,,,
-143000,Star anise,tsp,,,
-143100,Saffron,tsp,,,
-143200,tamarind,tsp,,,
-143300,Garam masala,tsp,,,
-143400,Ground basil,tsp,,,
-143500,Ground ginger,tsp,,,
-143600,Sesame seed,tsp,,,
-143700,Taco seasoning,tsp,,,
-143800,Cream of tartar,tsp,,,
-143900,Bouillon,tsp,,,
-144000,Vegetable bouillon,tsp,,,
-144100,Liquid smoke,oz,,,
-144200,Apple cider vinegar,oz,,,
-144300,Balsamic vinegar,oz,,,
-144400,Rice wine vinegar,oz,,,
-144500,Champagne vinegar,oz,,,
-144600,Vinegar,oz,,,
-144700,Chicken stock,oz,,,
-144800,Beef stock,oz,,,
-144900,Fish stock,oz,,,
-150000,Chicken,Lbs,,,
-150001,Chicken Brest,Lbs,,,
-150002,Chicken leg,Lbs,,,
-150003,Chicken thighs,Lbs,,,
-150004,Chicken wings,Lbs,,,
-150005,Whole chicken,Lbs,,,
-150006,Cooked chicken,Lbs,,,
-150007,Ground chicken,Lbs,,,
-150008,Chicken giblets,Lbs,,,
-150009,Cornish hen,Lbs,,,
-150100,Beef,Lbs,,,
-150101,Ground beef,Lbs,,,
-150102,Beef steak,Lbs,,,
-150103,Beef shank,Lbs,,,
-150104,Beef roast,Lbs,,,
-150105,Brisket,Lbs,,,
-150106,Beef ribs,Lbs,,,
-150107,Beef liver,Lbs,,,
-150108,Corned beef,Lbs,,,
-150200,Pork,Lbs,,,
-150201,Ground pork,Lbs,,,
-150202,Pork chop,Lbs,,,
-150203,Pork shoulder,Lbs,,,
-150204,Pork roast,Lbs,,,
-150205,Pork rib,Lbs,,,
-150206,Pork belly,Lbs,,,
-150300,Lamb,Lbs,,,
-150301,Ground lamb,Lbs,,,
-150302,Lamb chops,Lbs,,,
-150303,Leg of lamb,Lbs,,,
-150304,Lamb shank,Lbs,,,
-150400,Turkey,Lbs,,,
-150401,Ground turkey,Lbs,,,
-150402,Turkey leg,Lbs,,,
-150500,Bacon,oz,,,
-150600,Chorizo,oz,,,
-150700,Sausage,Lbs,,,
-150800,Ham,Lbs,,,
-150900,Salami,oz,,,
-151000,Prosciutto,oz,,,
-151100,Bologna,oz,,,
-151200,Pancetta,oz,,,
-151300,Duck,Lbs,,,
-151400,Bratwurst,Lbs,,,
-151500,Venison,Lbs,,,
-151600,Spam,oz,,,
-151700,Polish sausage,Lbs,,,
-151800,Pepperoni,oz,,,
-151900,Veal,Lbs,,,
-160000,Salmon,oz,,,
-160100,Smoked salmon,oz,,,
-160200,Canned salmon,oz,,,
-160300,Fish fillets,oz,,,
-160400,Tilapia,oz,,,
-160500,Haddock,oz,,,
-160600,Grouper,oz,,,
-160700,Cod,oz,,,
-160800,Flounder,oz,,,
-160900,Anchovies,oz,,,
-161000,Tuna steak,oz,,,
-161100,Canned tuna,oz,,,
-161200,Rockfish,oz,,,
-161300,Sardines,oz,,,
-161400,Monkfish,oz,,,
-161500,Whitefish,oz,,,
-161600,Halibut,oz,,,
-161700,Trout,oz,,,
-161800,Mahi mahi,oz,,,
-161900,Catfish,oz,,,
-162000,Sea bass,oz,,,
-162100,Mackerel,oz,,,
-162200,Swordfish,oz,,,
-162300,Sole,oz,,,
-162400,Red snapper,oz,,,
-162500,Pollock,oz,,,
-162600,Herring,oz,,,
-162700,Perch,oz,,,
-162800,Caviar,oz,,,
-162900,Pike,oz,,,
-163000,Bluefish,oz,,,
-163100,Lemon sole,oz,,,
-163200,Eel,oz,,,
-163300,Carp,oz,,,
-163400,Cuttlefish,oz,,,
-170000,Shrimp,oz,,,
-170100,Prawns,oz,,,
-170200,Crab,oz,,,
-170300,Scallop,oz,,,
-170400,Clam,oz,,,
-170500,Lobster,oz,,,
-170600,Octopus,oz,,,
-170700,Calamari,oz,,,
-170800,Squid,oz,,,
-170900,Oyster,oz,,,
-171000,Cockle,oz,,,
-171100,Crawfish,oz,,,
-171200,Mussel,oz,,,
-180000,Flour,cups,,,
-180001,White flour,cups,,,
-180002,Whole wheat flour,cups,,,
-180003,Bread flour,cups,,,
-180004,Self-rising flour,cups,,,
-180100,Wheat germ,cups,,,
-180200,Wheat,cups,,,
-180300,Barley,cups,,,
-180400,Yeast,cups,,,
-180500,Baking powder,cups,,,
-180600,Baking soda,cups,,,
-180700,Cornstarch,cups,,,
-180800,Bisquick,cups,,,
-180900,Bake mix,cups,,,
-181000,Rice,cups,,,
-181001,White Rice,cups,,,
-181002,Brown Rice,cups,,,
-181003,Jasmine Rice,cups,,,
-181100,Pasta,oz,,,
-181200,Bread Crumbs,oz,,,
-181300,Bran,oz,,,
-181400,Noodles,oz,,,
-181500,Oats,oz,,,
-181600,Quinoa,oz,,,
-181700,Cornmeal,oz,,,
-181800,Dough,oz,,,
-181801,Pizza Dough,oz,,,
-181802,Bread Dough,oz,,,
-181803,Crescent Roll Dough,oz,,,
-181804,Filo Dough,oz,,,
-181900,Popcorn,oz,,,
-182000,Stuffing mix,oz,,,
-182100,Couscous,oz,,,
-182200,Pie crust,oz,,,
-182300,Crutons,oz,,,
-182400,Ramen Noodles,oz,,,
-190000,Chips,oz,,,
-190100,Tortilla chips,oz,,,
-190200,Saltines,oz,,,
-190300,Pita,oz,,,
-190400,Baguette,oz,,,
-190500,Corn tortillas,oz,,,
-190600,Flour tortillas,oz,,,
-190700,Cereal,oz,,,
-190800,Biscuits,oz,,,
-190900,Ravioli,oz,,,
-191000,Hotdog bun,oz,,,
-191100,Hamburger bun,oz,,,
-191200,Bagel,oz,,,
-191300,Pretzel,oz,,,
-191400,Graham crackers,oz,,,
-191500,Croissants,oz,,,
-191600,Breadsticks,oz,,,
-191700,Ciabatta,oz,,,
-191800,Sourdough bread,oz,,,
-191900,Bread,oz,,,
-192000,Rye bread,oz,,,
-200000,Olive oil,oz,,,
-200100,Vegetable oil,oz,,,
-200200,Peanut oil,oz,,,
-200300,Coconut oil,oz,,,
-200400,Truffle oil,oz,,,
-200500,Lard,oz,,,
-200600,Grape seed oil,oz,,,
-200700,Almond oil,oz,,,
-200800,Shortening,oz,,,
-200900,Chili oil,oz,,,
-210000,Peanut,oz,,,
-210100,Almond,oz,,,
-210200,Chestnut,oz,,,
-210300,Cashew,oz,,,
-210400,Walnut,oz,,,
-210500,Pecan,oz,,,
-210600,Flax,oz,,,
-210700,Pine nut,oz,,,
-210800,Pistachio,oz,,,
-210900,Praline,oz,,,
-211000,Hazelnut,oz,,,
-211100,Macadamia,oz,,,
-211200,Macaroon,oz,,,
-211300,Almond paste,oz,,,
-211400,Almond butter,oz,,,
-211500,Peanut butter,oz,,,
-211600,Cashew butter,oz,,,
-220000,Mayonnaise,oz,,,
-220100,Mustard,oz,,,
-220200,Ketchup,oz,,,
-220300,Vinegar,oz,,,
-220400,Mirin,oz,,,
-220500,Fish sauce,oz,,,
-220600,Salsa,oz,,,
-230000,Chocolate,oz,,,
-230100,White chocolate,oz,,,
-230200,Marshmellow,oz,,,
-230300,Pudding mix,oz,,,
-230400,Cookie dough,oz,,,
-230500,Chocolate syrup,oz,,,
-230600,Nutella,oz,,,
-230700,Ice cream,oz,,,
-230800,Gelato,oz,,,
-230900,Cake,oz,,,
-231000,Brownie mix,oz,,,
-231100,Cookies,oz,,,
-240000,Apple juice,oz,,,
-240100,Orange juice,oz,,,
-240200,Cranberry juice,oz,,,
-240300,Grape juice,oz,,,
-240400,Pineapple juice,oz,,,
-240500,Coffee,oz,,,
-240600,Espresso,oz,,,
-240700,Tomato juice,oz,,,
-240800,Green tea,oz,,,
-240900,Tea,oz,,,
-241000,Coke,oz,,,
-241100,Sprite,oz,,,
-241200,Ginger ale,oz,,,
-241300,Club soda,oz,,,
-241400,Margarita mix,oz,,,
-241500,Fruit juice,oz,,,
-250000,Chicken broth,oz,,,
-250100,Beef broth,oz,,,
-250200,Vegetable broth,oz,,,
-250300,Vegetable soup,oz,,,
-250400,Tomato soup,oz,,,
-250500,Chicken soup,oz,,,
-250600,Onion soup,oz,,,
-250700,Dashi,oz,,,
-250800,Mushroom soup,oz,,,
-260000,Black beans,oz,,,
-260100,Pinto beans,oz,,,
-260200,Navy beans,oz,,,
-260300,Cannellini beans,oz,,,
-260400,Kidney beans,oz,,,
-260500,Lima beans,oz,,,
-260600,French beans,oz,,,
-260700,Green beans,oz,,,
-260800,Soy beans,oz,,,
-260900,Coffee beans,oz,,,
-261000,Lentils,oz,,,
-261100,Chickpea,oz,,,
-261200,Hummus,oz,,,
-270000,Tomato sauce,oz,,,
-270100,Tomato paste,oz,,,
-270200,Chicken gravy,oz,,,
-270300,Beef gravy,oz,,,
-270400,Curry paste,oz,,,
-270500,Alfredo sauce,oz,,,
-270600,Chili Sauce,oz,,,
-270700,Pesto,oz,,,
-270800,Hoisin sauce,oz,,,
-270900,Fish Sauce,oz,,,
-280000,Beer,oz,,,
-280100,Red wine,oz,,,
-280200,White wine,oz,,,
-280300,Champagne,oz,,,
-280400,Dessert wine,oz,,,
-280500,Port wine,oz,,,
-280600,Sparking wine,oz,,,
-280700,Burgundy wine,oz,,,
-280800,Bitters,oz,,,
-280900,Rum,oz,,,
-281000,Tequila,oz,,,
-281100,Sherry,oz,,,
-281200,Vodka,oz,,,
-281300,Brandy,oz,,,
-281400,Whiskey,oz,,,
-281500,Sake,oz,,,
-281600,Amaretto,oz,,,
-281700,Vermouth,oz,,,
-281800,Triple sec,oz,,,
-281900,Schnapps,oz,,,
-282000,Cognac,oz,,,
-282100,Chocolate liqueur,oz,,,
-282200,Kalua,oz,,,
-282300,Bourbon,oz,,,
-290000,Sugar,tsp,,,
-290100,Brown Sugar,tsp,,,
-290200,Powdered Sugar,tsp,,,
-290300,Honey,tsp,,,
-290400,Syrup,tsp,,,
-290500,Corn syrup,tsp,,,
-290600,Molasses,tsp,,,
-290700,Maple syrup,tsp,,,
-290800,Splenda,tsp,,,
-290900,Steevia,tsp,,,
+100000,Butter,tbsp
+100100,Eggs,oz
+100200,Milk,cups
+100201,1% Milk,cups
+100202,2% Milk,cups
+100203,Whole,cups
+100204,Fat-free,cups
+100205,Half and half,cups
+100206,Whipping cream,cups
+100300,Coffee creamer,cups
+100400,Cheese,oz
+100401,Parmesan,oz
+100402,Cheddar,oz
+100403,Cream cheese,oz
+100404,Mozzarella,oz
+100405,American,oz
+100406,Monterey jack,oz
+100407,Cottage cheese,oz
+100408,"Goat cheese""",oz
+100409,Feta,oz
+100410,Swiss,oz
+100411,Blue,oz
+100412,Colby,oz
+100413,Pepper jack,oz
+100414,Gouda,oz
+100415,Romano,oz
+100416,Brie,oz
+100417,Gruyere,oz
+100418,Havarti,oz
+100419,Queso,oz
+100420,Fresco,oz
+100421,Asiago,oz
+100422,Mascarpone,oz
+100423,Muenster,oz
+100424,Velveeta,oz
+100425,Ricotta,oz
+100500,Yogurt,oz
+100600,Greek yogurt,oz
+110000,Soy milk,cups
+110100,Coconut Milk,cups
+110200,Hemp Milk,cups
+110300,Almond Milk,cups
+110400,Cashew Milk,cups
+120000,Asparagus,qty
+120100,Zucchini,qty
+120200,Yellow squash,qty
+120300,Pumpkin,qty
+120400,Cucumber,qty
+120500,Pickle,qty
+120600,Garlic,qty
+120700,Onion,qty
+120701,Yellow Onion,qty
+120702,White Onion,qty
+120703,Sweet Onion,qty
+120704,Red Onion,qty
+120800,Scallion,qty
+120900,Shallot,qty
+121000,Tomato,qty
+121100,Potato,qty
+121101,Russet Potatoes,qty
+121102,Sweet Potatoes,qty
+121103,Red Potatoes,qty
+121104,Golden Potatoes,qty
+121200,Salad greens,qty
+121300,Carrots,qty
+121400,Olives,qty
+121500,Ginger,qty
+121600,Beet,qty
+121700,Cauliflower,qty
+121800,Mushroom,qty
+121900,Corn,qty
+122000,Spinach,qty
+122100,Kale,qty
+122200,Green beans,qty
+122300,Celery,qty
+122400,Rhubarb,qty
+122500,Cabbage,qty
+122600,Brussel sprouts,qty
+122700,Horseradish,qty
+122800,Radishes,qty
+122900,Sun dried tomatoes,qty
+123000,Bell pepper,qty
+123100,Chili pepper,qty
+123200,Avocado,qty
+123300,Peas,qty
+123400,Snap peas,qty
+123500,Jicama,qty
+123600,Fresh Herbs,oz
+123601,Cilantro,oz
+123602,Basil,oz
+123603,Mint,oz
+123604,Oregano,oz
+123605,Thyme,oz
+123606,Dill,oz
+123607,Rosemary,oz
+123608,Parsley,oz
+130000,Lemon,qty
+130100,Lime,qty
+130200,Orange,qty
+130300,Tangerine,qty
+130400,Clementine,qty
+130500,Tangelos,qty
+130600,Kumquat,qty
+130700,Grapefruit,qty
+130800,Apple,qty
+130900,Pear,qty
+131000,Apricot,qty
+131100,Peach,qty
+131200,Plum,qty
+131300,Banana,qty
+131400,Mango,qty
+131500,Pineapple,qty
+131600,Strawberries,qty
+131700,Blueberries,qty
+131800,Currant,qty
+131900,Raspberries,qty
+132000,Blackberries,qty
+132100,Cranberries,qty
+132200,Cherry,qty
+132300,Lingonberry,qty
+132400,Lychee,qty
+132500,Watermelon,qty
+132600,Honeydew,qty
+132700,Cantaloupe,qty
+132800,Grape,qty
+132900,Prunes,qty
+133000,Raisins,qty
+133100,Papaya,qty
+133200,Pomegranate,qty
+133300,Passion fruit,qty
+133400,Persimmons,qty
+133500,Guava,qty
+133600,Star fruit,qty
+133700,Kiwi,qty
+133800,Fig,qty
+140000,Red pepper flakes,tsp
+140100,Paprika,tsp
+140200,Chili powder,tsp
+140300,Chive,tsp
+140400,Garlic powder,tsp
+140500,Onion powder,tsp
+140600,Oregano,tsp
+140700,Cinnamon,tsp
+140800,Vanilla,tsp
+140900,Cacao,tsp
+141000,Nutmeg,tsp
+141100,Clove,tsp
+141200,Cumin,tsp
+141300,Italian seasoning,tsp
+141400,Thyme,tsp
+141500,Peppercorn,tsp
+141600,Curry powder,tsp
+141700,Bay leaf,tsp
+141800,Sage,tsp
+141900,Chinese five spice,tsp
+142000,Allspice,tsp
+142100,Turmeric,tsp
+142200,Ground coriander,tsp
+142300,Coriander,tsp
+142400,Celery salt,tsp
+142500,Tarragon,tsp
+142600,Cardamom,tsp
+142700,Celery seed,tsp
+142800,Mustard seed,tsp
+142900,Dill seed,tsp
+143000,Star anise,tsp
+143100,Saffron,tsp
+143200,tamarind,tsp
+143300,Garam masala,tsp
+143400,Ground basil,tsp
+143500,Ground ginger,tsp
+143600,Sesame seed,tsp
+143700,Taco seasoning,tsp
+143800,Cream of tartar,tsp
+143900,Bouillon,tsp
+144000,Vegetable bouillon,tsp
+144100,Liquid smoke,oz
+144200,Apple cider vinegar,oz
+144300,Balsamic vinegar,oz
+144400,Rice wine vinegar,oz
+144500,Champagne vinegar,oz
+144600,Vinegar,oz
+144700,Chicken stock,oz
+144800,Beef stock,oz
+144900,Fish stock,oz
+150000,Chicken,lb
+150001,Chicken Brest,lb
+150002,Chicken leg,lb
+150003,Chicken thighs,lb
+150004,Chicken wings,lb
+150005,Whole chicken,lb
+150006,Cooked chicken,lb
+150007,Ground chicken,lb
+150008,Chicken giblets,lb
+150009,Cornish hen,lb
+150100,Beef,lb
+150101,Ground beef,lb
+150102,Beef steak,lb
+150103,Beef shank,lb
+150104,Beef roast,lb
+150105,Brisket,lb
+150106,Beef ribs,lb
+150107,Beef liver,lb
+150108,Corned beef,lb
+150200,Pork,lb
+150201,Ground pork,lb
+150202,Pork chop,lb
+150203,Pork shoulder,lb
+150204,Pork roast,lb
+150205,Pork rib,lb
+150206,Pork belly,lb
+150300,Lamb,lb
+150301,Ground lamb,lb
+150302,Lamb chops,lb
+150303,Leg of lamb,lb
+150304,Lamb shank,lb
+150400,Turkey,lb
+150401,Ground turkey,lb
+150402,Turkey leg,lb
+150500,Bacon,oz
+150600,Chorizo,oz
+150700,Sausage,lb
+150800,Ham,lb
+150900,Salami,oz
+151000,Prosciutto,oz
+151100,Bologna,oz
+151200,Pancetta,oz
+151300,Duck,lb
+151400,Bratwurst,lb
+151500,Venison,lb
+151600,Spam,oz
+151700,Polish sausage,lb
+151800,Pepperoni,oz
+151900,Veal,lb
+160000,Salmon,oz
+160100,Smoked salmon,oz
+160200,Canned salmon,oz
+160300,Fish fillets,oz
+160400,Tilapia,oz
+160500,Haddock,oz
+160600,Grouper,oz
+160700,Cod,oz
+160800,Flounder,oz
+160900,Anchovies,oz
+161000,Tuna steak,oz
+161100,Canned tuna,oz
+161200,Rockfish,oz
+161300,Sardines,oz
+161400,Monkfish,oz
+161500,Whitefish,oz
+161600,Halibut,oz
+161700,Trout,oz
+161800,Mahi mahi,oz
+161900,Catfish,oz
+162000,Sea bass,oz
+162100,Mackerel,oz
+162200,Swordfish,oz
+162300,Sole,oz
+162400,Red snapper,oz
+162500,Pollock,oz
+162600,Herring,oz
+162700,Perch,oz
+162800,Caviar,oz
+162900,Pike,oz
+163000,Bluefish,oz
+163100,Lemon sole,oz
+163200,Eel,oz
+163300,Carp,oz
+163400,Cuttlefish,oz
+170000,Shrimp,oz
+170100,Prawns,oz
+170200,Crab,oz
+170300,Scallop,oz
+170400,Clam,oz
+170500,Lobster,oz
+170600,Octopus,oz
+170700,Calamari,oz
+170800,Squid,oz
+170900,Oyster,oz
+171000,Cockle,oz
+171100,Crawfish,oz
+171200,Mussel,oz
+180000,Flour,cups
+180001,White flour,cups
+180002,Whole wheat flour,cups
+180003,Bread flour,cups
+180004,Self-rising flour,cups
+180100,Wheat germ,cups
+180200,Wheat,cups
+180300,Barley,cups
+180400,Yeast,cups
+180500,Baking powder,cups
+180600,Baking soda,cups
+180700,Cornstarch,cups
+180800,Bisquick,cups
+180900,Bake mix,cups
+181000,Rice,cups
+181001,White Rice,cups
+181002,Brown Rice,cups
+181003,Jasmine Rice,cups
+181100,Pasta,oz
+181200,Bread Crumbs,oz
+181300,Bran,oz
+181400,Noodles,oz
+181500,Oats,oz
+181600,Quinoa,oz
+181700,Cornmeal,oz
+181800,Dough,oz
+181801,Pizza Dough,oz
+181802,Bread Dough,oz
+181803,Crescent Roll Dough,oz
+181804,Filo Dough,oz
+181900,Popcorn,oz
+182000,Stuffing mix,oz
+182100,Couscous,oz
+182200,Pie crust,oz
+182300,Crutons,oz
+182400,Ramen Noodles,oz
+190000,Chips,oz
+190100,Tortilla chips,oz
+190200,Saltines,oz
+190300,Pita,oz
+190400,Baguette,oz
+190500,Corn tortillas,oz
+190600,Flour tortillas,oz
+190700,Cereal,oz
+190800,Biscuits,oz
+190900,Ravioli,oz
+191000,Hotdog bun,oz
+191100,Hamburger bun,oz
+191200,Bagel,oz
+191300,Pretzel,oz
+191400,Graham crackers,oz
+191500,Croissants,oz
+191600,Breadsticks,oz
+191700,Ciabatta,oz
+191800,Sourdough bread,oz
+191900,Bread,oz
+192000,Rye bread,oz
+200000,Olive oil,oz
+200100,Vegetable oil,oz
+200200,Peanut oil,oz
+200300,Coconut oil,oz
+200400,Truffle oil,oz
+200500,Lard,oz
+200600,Grape seed oil,oz
+200700,Almond oil,oz
+200800,Shortening,oz
+200900,Chili oil,oz
+210000,Peanut,oz
+210100,Almond,oz
+210200,Chestnut,oz
+210300,Cashew,oz
+210400,Walnut,oz
+210500,Pecan,oz
+210600,Flax,oz
+210700,Pine nut,oz
+210800,Pistachio,oz
+210900,Praline,oz
+211000,Hazelnut,oz
+211100,Macadamia,oz
+211200,Macaroon,oz
+211300,Almond paste,oz
+211400,Almond butter,oz
+211500,Peanut butter,oz
+211600,Cashew butter,oz
+220000,Mayonnaise,oz
+220100,Mustard,oz
+220200,Ketchup,oz
+220300,Vinegar,oz
+220400,Mirin,oz
+220500,Fish sauce,oz
+220600,Salsa,oz
+230000,Chocolate,oz
+230100,White chocolate,oz
+230200,Marshmellow,oz
+230300,Pudding mix,oz
+230400,Cookie dough,oz
+230500,Chocolate syrup,oz
+230600,Nutella,oz
+230700,Ice cream,oz
+230800,Gelato,oz
+230900,Cake,oz
+231000,Brownie mix,oz
+231100,Cookies,oz
+240000,Apple juice,oz
+240100,Orange juice,oz
+240200,Cranberry juice,oz
+240300,Grape juice,oz
+240400,Pineapple juice,oz
+240500,Coffee,oz
+240600,Espresso,oz
+240700,Tomato juice,oz
+240800,Green tea,oz
+240900,Tea,oz
+241000,Soda,
+241001,Coke,oz
+241001,Sprite,oz
+241002,Ginger ale,oz
+241003,Club soda,oz
+241100,Margarita mix,oz
+241200,Fruit juice,oz
+241300,Water,oz
+250000,Chicken broth,oz
+250100,Beef broth,oz
+250200,Vegetable broth,oz
+250300,Vegetable soup,oz
+250400,Tomato soup,oz
+250500,Chicken soup,oz
+250600,Onion soup,oz
+250700,Dashi,oz
+250800,Mushroom soup,oz
+260000,Black beans,oz
+260100,Pinto beans,oz
+260200,Navy beans,oz
+260300,Cannellini beans,oz
+260400,Kidney beans,oz
+260500,Lima beans,oz
+260600,French beans,oz
+260700,Green beans,oz
+260800,Soy beans,oz
+260900,Coffee beans,oz
+261000,Lentils,oz
+261100,Chickpea,oz
+261200,Hummus,oz
+270000,Tomato sauce,oz
+270100,Tomato paste,oz
+270200,Chicken gravy,oz
+270300,Beef gravy,oz
+270400,Curry paste,oz
+270500,Alfredo sauce,oz
+270600,Chili Sauce,oz
+270700,Pesto,oz
+270800,Hoisin sauce,oz
+270900,Fish Sauce,oz
+280000,Beer,oz
+280100,Red wine,oz
+280200,White wine,oz
+280300,Champagne,oz
+280400,Dessert wine,oz
+280500,Port wine,oz
+280600,Sparking wine,oz
+280700,Burgundy wine,oz
+280800,Bitters,oz
+280900,Rum,oz
+281000,Tequila,oz
+281100,Sherry,oz
+281200,Vodka,oz
+281300,Brandy,oz
+281400,Whiskey,oz
+281500,Sake,oz
+281600,Amaretto,oz
+281700,Vermouth,oz
+281800,Triple sec,oz
+281900,Schnapps,oz
+282000,Cognac,oz
+282100,Chocolate liqueur,oz
+282200,Kalua,oz
+282300,Bourbon,oz
+290000,Sugar,tsp
+290100,Brown Sugar,tsp
+290200,Powdered Sugar,tsp
+290300,Honey,tsp
+290400,Syrup,tsp
+290500,Corn syrup,tsp
+290600,Molasses,tsp
+290700,Maple syrup,tsp
+290800,Splenda,tsp
+290900,Steevia,tsp
