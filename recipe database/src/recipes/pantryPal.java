@@ -74,11 +74,10 @@ public class pantryPal {
 			choice = (char) System.in.read();
 			
 			if (choice == 'A'||choice =='a') {
-				toAddRecipes test1 = new toAddRecipes();
-				test1.addrecipe();
+				System.out.println("Might need integration with add recipe code");
 			}
 			if (choice == 'R'||choice =='r') {
-				System.out.println("Input recipe to be removed");
+				System.out.println("Input case sensative recipe to be removed");
 				criteria = reader.readLine();
 				criteria = reader.readLine();
 				if (P.removeRecipe(criteria)) {

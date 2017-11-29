@@ -33,7 +33,7 @@ public class recipeIO {
 				String[] volume = parts[5].split(":");
 				String[] measurement = parts[6].split(":");
 				String[] steps = parts[7].split(":");
-
+				
 				for (int i = 0; i < ingredients.length; i++) {
 					double vol = Double.parseDouble(volume[i]);
 					newRecipe.addItem(ingredients[i], vol, measurement[i]);
