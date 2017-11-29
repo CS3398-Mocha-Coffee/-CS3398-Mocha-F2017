@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Scanner;
 import java.util.Set;
 import java.io.BufferedReader;
 
@@ -84,7 +83,6 @@ public class pantryPal {
 				criteria = reader.readLine();
 				if (P.removeRecipe(criteria)) {
 					P.recipes.remove(criteria);
-					System.out.println(criteria+" has been removed");
 				}
 			}
 			if (choice == 'N'||choice =='n') {
