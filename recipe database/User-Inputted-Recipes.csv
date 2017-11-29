@@ -1,0 +1,41 @@
+Pasta,10 min,10 min,20 min
+Pasta,16.0
+Sauce,5.0
+Boil water
+Add pasta
+Add sauce
+
+
+Pizza,5 min,20 min,25 min
+cheese,20.0
+bread,20.0
+sauce,20.0
+Put pizza in oven
+
+
+
+Rice,10,10,20
+Rice,16
+Beans,7
+Heat Water
+Put rice in water
+
+
+Soup,10,20,30
+Water,20
+Seasoning,3
+Carrots,3
+Heat Water
+Add seasoning
+add carrots
+
+
+Burger,20 min,0 min,20 min
+Patty,1
+Patty
+Bread,2
+Bread
+cheese,1
+slice
+Put patty and cheese between bread
+

@@ -11,10 +11,9 @@ public class recipeClass {
 		String measurements;
 		IngredientProperties() {}
 		IngredientProperties(Ingredient type, double volume, String measurement) {
-			IngredientProperties newItem = new IngredientProperties();
-			newItem.ingredient = type;
-			newItem.amount = volume;
-			newItem.measurements = measurement;
+			ingredient = type;
+			amount = volume;
+			measurements = measurement;
 		}
 		String getName() { return ingredient.getItemName(); }
 	}
@@ -24,9 +23,8 @@ public class recipeClass {
 		String instruction;
 		StepProperties(){}
 		StepProperties(int order, String direction){
-			StepProperties newSteps = new StepProperties();
-			newSteps.orderNumber = order;
-			newSteps.instruction = direction;
+			orderNumber = order;
+			instruction = direction;
 		}
 	}
 	
@@ -52,6 +50,15 @@ public class recipeClass {
 		return this.name;
 	}
 	
+	public String findName(String itemName) {
+		String found = null;
+		String temp = this.name;
+		if (itemName.equalsIgnoreCase(temp)) {
+			found = itemName;
+		}
+		return found;
+	}
+	
 	public String getPrepTime() {
 		return this.prepTime;
 	}
@@ -75,9 +82,9 @@ public class recipeClass {
 	public IngredientProperties getIngredient(String itemName) {		
 		IngredientProperties ing = null;
 		for(int i=0; i<this.ingredients.size(); i++) {
-			
 			IngredientProperties ip = this.ingredients.get(i);
-			if (ip.getName()==itemName) {
+			String temp= ip.getName();
+			if (itemName.equalsIgnoreCase(temp)) {
 				ing = ip;
 				break;
 			}
@@ -90,9 +97,8 @@ public class recipeClass {
 	}
 
 	public void addItem(String itemName, double volume, String measurement) {
-		Ingredient ingre = null;
+		Ingredient ingre = new Ingredient();
 		ingre.setItemName(itemName);
-
 		this.ingredients.add(new IngredientProperties(ingre, volume, measurement));
 	}
 
@@ -108,7 +114,7 @@ public class recipeClass {
 	public boolean hasTag(String category){
 		
 		for(TagProperties cur : this.tags) {
-			if( cur.tags.equalsIgnoreCase(category))
+			if(cur.tags.equalsIgnoreCase(category))
 				return true;
 		}
 		return false;
@@ -128,11 +134,11 @@ public class recipeClass {
 	}
 
 	public void setCookTime(String c) {
-		this.prepTime = c;
+		this.cookTime = c;
 	}
 	
 	public void setTotalTime(String t) {
-		this.prepTime = t;
+		this.totalTime = t;
 	}
 
 	public void setFavorite(boolean f) {
