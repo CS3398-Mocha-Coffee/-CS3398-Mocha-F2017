@@ -4,7 +4,7 @@ import java.util.Hashtable;
 
 public class Driver {
 	private static Inventory pantry;
-	private static final String CSV_FILE = "C:\\Users\\AJ\\eclipse-workspace\\PantryPlanner\\src\\pantryPlanner\\databases";
+	private static final String CSV_FILE = "C:\\Users\\sfgib\\eclipse-workspace\\-CS3398-Mocha-F2017\\PantryPlanner\\src\\pantryPlanner\\databases\\ingredients.csv";
 	private static Output out = new Output();
 	
 	

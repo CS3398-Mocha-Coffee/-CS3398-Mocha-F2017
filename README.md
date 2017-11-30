@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Team Mocha: Pantry Planner README
 Pantry Planner is a desktop application that gives the user real-time access to the food available to them in their pantry.  As well as possible recipes for the food available.  Recipes are scraped in from the internet and stored in databases included with the application.
 
@@ -32,3 +33,23 @@ UPDATE - 04NOV2017 I completely restructured the code for the GUI. I have now ad
 
 ***Icon Creator Credit***
 recipe(16, 32, 128): Icon made by David Lanham Freeware non-commercial from www.findicons.com recipeBook128: Icon made by Freepik from www.flaticon.com coveredFoodTray(16, 32, 128): Icon made by Freepik from www.flaticon.com pantry128: Icon made by Freepik from www.flaticon.com
+=======
+# -CS3398-Mocha-F2017
+
+## To Be Completed:
+- [ ] Complete Shopping List feature
+- [ ] Map out website design
+- [ ] Allow recipes to interact with shopping list
+- [ ] INTEGRATE CODE INTO DEVELOP BRANCH
+
+## Completed:
+- [x] Determine how to approach the create of Ingredients Database
+- [x] Create classes for each General Ingredient Category
+- [x] User Login
+- [x] Web Scraper UML Design
+- [x] Create Ingredients Database
+- [x] Web Crawl/Scrape into database
+- [x] Recipe Search
+- [x] Custom Recipe code successfully integrated (Abel & Arthur)
+
+>>>>>>> master
