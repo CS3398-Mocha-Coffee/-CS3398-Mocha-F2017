@@ -44,22 +44,26 @@ def customSearch(searchTerm):
 
         for i in range(0, 10):   #number of results to scan for recipes
             if re.match(content_pattern, Results[i]['link']):   #scans urls and looks for "/recipe/"
-                print(Results[i]['link'])                       #if found, scrapes the page
-                thisRecipe = scraper.getRecipe(Results[i]['link'])
-                # thisRecipe[Name,totalTime,CookTime,PrepTime,ingredients, directions]
-                timeslist = [thisRecipe[0], thisRecipe[1], thisRecipe[2], thisRecipe[3]]
-                ingredients = [thisRecipe[0], thisRecipe[4]]
-                directions = [thisRecipe[0],  thisRecipe[5]]
-                quantities = [thisRecipe[0], thisRecipe[6]]
-                writerTimes.writerow(timeslist[:])
-                times.flush()   #times wont write to file unless its flushed
-                writerQuantity.writerow(quantities[:])
-                quant.flush()
-                writerIngredients.writerow(ingredients[:])
-                ingre.flush()
-                writerDirections.writerow(directions[:])
-                dir.flush()
-                time.sleep(1)   #prevents attack on webserver
+                s = Results[i]['link'].encode('ascii', 'ignore')
+                if s.endswith("print/"):
+                    print("Discard")
+                else:
+                    print(Results[i]['link'])                       #if found, scrapes the page
+                    thisRecipe = scraper.getRecipe(Results[i]['link'])
+                    # thisRecipe[Name,totalTime,CookTime,PrepTime,ingredients, directions]
+                    timeslist = [thisRecipe[0], thisRecipe[1], thisRecipe[2], thisRecipe[3]]
+                    ingredients = [thisRecipe[0], thisRecipe[4]]
+                    directions = [thisRecipe[0],  thisRecipe[5]]
+                    quantities = [thisRecipe[0], thisRecipe[6]]
+                    writerTimes.writerow(timeslist[:])
+                    times.flush()   #times wont write to file unless its flushed
+                    writerQuantity.writerow(quantities[:])
+                    quant.flush()
+                    writerIngredients.writerow(ingredients[:])
+                    ingre.flush()
+                    writerDirections.writerow(directions[:])
+                    dir.flush()
+                    time.sleep(1)   #prevents attack on webserver
         times.close()   #closes files
         ingre.close()
         dir.close()
