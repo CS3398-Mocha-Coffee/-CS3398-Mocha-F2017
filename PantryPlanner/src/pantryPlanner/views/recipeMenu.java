@@ -120,6 +120,7 @@ public class recipeMenu extends JFrame
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
+				new RecipeSearchView("Custom Recipe Search");
 			}
 		});
 		/*

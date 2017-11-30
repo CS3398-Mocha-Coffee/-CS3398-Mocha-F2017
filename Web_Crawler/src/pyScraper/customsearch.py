@@ -3,6 +3,7 @@ import re
 import AllRecipes
 import sys, time
 import csv
+import os
 from pprint import pprint
 
 
@@ -17,11 +18,11 @@ def customSearch(searchTerm):
     content_pattern = re.compile(r"""http://allrecipes.com/recipe/\d+/\S*""")
     api_key = "AIzaSyAgwnPor9TjUGjfzRnmCPjOLLQVariv4hU"  #google api key for CSE use
     cse_id = "017796283266161835558:_1vdw7w3wey"   #made a Custom Search Engine for allrecipes.com
-                                                   #this is the ID for that search engine
+                                                    #this is the ID for that search engine
     scraper = AllRecipes.AllRecipes("http://www.allrecipes.com") #initalize scraper
 
     Results = googleSearch(searchTerm, api_key, cse_id)
-    pathToFile = "../database/"
+    pathToFile = "../PantryPlanner/src/pantryPlanner/databases/"
     #opening CSV file
     with open(pathToFile+'custom times.csv', 'w') as times, \
          open(pathToFile+'custom ingredients.csv', 'w') as ingre, \
@@ -65,10 +66,7 @@ def customSearch(searchTerm):
         quant.close()
 
 if __name__ == '__main__':
-    try:
-        customSearch("Spaghetti")
-    except Exception:
-          print("Something happened. But the search continues!")
+    print("Starting Search...")
     # please do not add moore custom searches.
     # This is just to show that the function works.
     # will use just the function when importing to JAVA.

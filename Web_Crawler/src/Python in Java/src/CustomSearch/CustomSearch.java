@@ -1,5 +1,7 @@
 package CustomSearch;
 
+import java.beans.PropertyChangeSupport;
+
 import org.python.core.PyException;
 import org.python.core.PyObject;
 import org.python.core.PyString;
@@ -9,7 +11,7 @@ public class CustomSearch {
 	private static String filepath;
 	private static String function;
 	private static String arg;
-	
+ 
 	public static void setFilePath(String pathToScript) {
 		filepath = pathToScript;
 	}
@@ -29,10 +31,9 @@ public class CustomSearch {
 		  4) *Interpreter Name: call it what you want
 		     *Interpreter Executable: jython2.7.1b3/jython.jar
 		  5) Click 'Apply' 
-		*/
-		
-		//FOR Integration: SET FILEPATH TO YOUR COPY OF "customsearch.py" (ONLY IF customsearch.py IS NOT FOUND)
-		setFilePath("../pyScraper/customsearch.py");
+		*/		
+		//FOR Integration: SET FILEPATH TO YOUR COPY OF "customsearch.py" (ONLY IF customsearch.py IS NOT FOUND)	
+		setFilePath("..\\Web_Crawler\\src\\pyScraper\\customsearch.py");
 		PythonInterpreter interpreter = new PythonInterpreter();
 	    interpreter.execfile(getFilePath());
 	    PyObject cSearch = interpreter.get("customSearch"); //name of the Python function
@@ -44,13 +45,8 @@ public class CustomSearch {
 	    }catch(PyException e) {
 	    	e.printStackTrace();
 	    }
-	    
 	    interpreter.close();
 	    
-	}
-	public static void main(String[] args) throws Exception {
-		customSearch("Spaghetti");    
-	}
-	
+	}	
 
 }
