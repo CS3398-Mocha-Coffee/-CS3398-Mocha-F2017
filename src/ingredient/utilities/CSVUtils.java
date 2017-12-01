@@ -1,3 +1,4 @@
+package ingredient.utilities;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +7,7 @@ import java.util.Scanner;
 public class CSVUtils {
 
     private static final char DEFAULT_SEPARATOR = ',';
-    private static final char DEFAULT_QUOTE = '"';
-   
+    private static final char DEFAULT_QUOTE = '"';   
     /**
      * getParsed uses @param csvFile to parse a file and @return an ArrayList of Lists containing elements of each line.
      * @throws Exception if file not found.
