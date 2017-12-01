@@ -194,9 +194,15 @@ public class RecipeManager {
 		for (int i = 1; i < timesFile.size(); i++) {
 			for(int k = 1; k < timesFile.get(i).size(); k++) {
 				if(r < recipes.size()) {
-					recipes.get(r).setTotalTime(timesFile.get(i).get(k));
-					recipes.get(r).setCookTime(timesFile.get(i).get(k+1));
-					recipes.get(r).setPrepTime(timesFile.get(i).get(k+2));
+					String total = timesFile.get(i).get(k).replace("['", "");
+					total = total.replace("']", "");
+					String cook = timesFile.get(i).get(k+1).replace("['", "");
+					cook = cook.replace("']", "");
+					String prep = timesFile.get(i).get(k+2).replace("['", "");
+					prep = prep.replace("']", "");
+					recipes.get(r).setTotalTime(total);
+					recipes.get(r).setCookTime(cook);
+					recipes.get(r).setPrepTime(prep);
 					r++;
 					break;
 				}
