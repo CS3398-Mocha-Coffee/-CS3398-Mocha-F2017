@@ -14,4 +14,14 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+<<<<<<< HEAD
+	<linkedResources>
+		<link>
+			<name>jython2.7.1b3</name>
+			<type>2</type>
+			<location>C:/Users/sfgib/eclipse-workspace/-CS3398-Mocha-F2017/Web_Crawler/jython2.7.1b3</location>
+		</link>
+	</linkedResources>
+=======
+>>>>>>> 2e16fdb76ed0f9be1cecc0e39616b02f3329d140
 </projectDescription>
