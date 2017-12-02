@@ -24,7 +24,7 @@ public class recipeSearchMenu extends JFrame
 {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField tf_enterRecipe;
 	private JButton b_Search;
 
 	/**
@@ -43,7 +43,7 @@ public class recipeSearchMenu extends JFrame
 		setFont(new Font("Dubai", Font.PLAIN, 12));
 		setTitle("SEARCH RECIPE");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 465, 413);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -51,9 +51,9 @@ public class recipeSearchMenu extends JFrame
 		JLabel lblEnterRecipe = new JLabel("ENTER RECIPE:");
 		lblEnterRecipe.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
-		textField = new JTextField();
-		textField.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		textField.setColumns(10);
+		tf_enterRecipe = new JTextField();
+		tf_enterRecipe.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		tf_enterRecipe.setColumns(10);
 		
 		JTextPane textPane = new JTextPane();
 		textPane.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
@@ -71,7 +71,7 @@ public class recipeSearchMenu extends JFrame
 							.addContainerGap()
 							.addComponent(lblEnterRecipe)
 							.addPreferredGap(ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-							.addComponent(textField, GroupLayout.PREFERRED_SIZE, 237, GroupLayout.PREFERRED_SIZE)
+							.addComponent(tf_enterRecipe, GroupLayout.PREFERRED_SIZE, 237, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(b_Search)))
 					.addContainerGap())
@@ -82,7 +82,7 @@ public class recipeSearchMenu extends JFrame
 					.addGap(25)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblEnterRecipe, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(tf_enterRecipe, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(b_Search))
 					.addGap(18)
 					.addComponent(textPane, GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
@@ -99,6 +99,7 @@ public class recipeSearchMenu extends JFrame
 			public void actionPerformed(ActionEvent arg0) 
 			{
 				//add methods here
+				tf_enterRecipe.setText("");
 			}
 		});
 		

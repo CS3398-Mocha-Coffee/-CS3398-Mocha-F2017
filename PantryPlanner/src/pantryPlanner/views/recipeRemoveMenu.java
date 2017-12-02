@@ -22,7 +22,7 @@ import java.awt.event.ActionEvent;
 public class recipeRemoveMenu extends JFrame 
 {
 	private JPanel contentPane;	
-	private JTextField textField;
+	private JTextField tf_recipe;
 	private JButton b_Find;
 
 	/**
@@ -56,9 +56,9 @@ public class recipeRemoveMenu extends JFrame
 		JLabel lblEnterRecipe = new JLabel("ENTER RECIPE:");
 		lblEnterRecipe.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
-		textField = new JTextField();
-		textField.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		textField.setColumns(10);
+		tf_recipe = new JTextField();
+		tf_recipe.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		tf_recipe.setColumns(10);
 		
 		//button block
 		b_Find = new JButton("FIND");
@@ -70,7 +70,7 @@ public class recipeRemoveMenu extends JFrame
 				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
 					.addComponent(lblEnterRecipe)
 					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 244, GroupLayout.PREFERRED_SIZE)
+					.addComponent(tf_recipe, GroupLayout.PREFERRED_SIZE, 244, GroupLayout.PREFERRED_SIZE)
 					.addGap(12)
 					.addComponent(b_Find)
 					.addContainerGap())
@@ -87,7 +87,7 @@ public class recipeRemoveMenu extends JFrame
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblEnterRecipe)
 						.addComponent(b_Find)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(tf_recipe, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(25))
 		);
 		contentPane.setLayout(gl_contentPane);
@@ -100,8 +100,11 @@ public class recipeRemoveMenu extends JFrame
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	private void createEventsRemove() 
 	{
-		b_Find.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		b_Find.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				tf_recipe.setText("");
 			}
 		});
 		

@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
 import java.awt.Font;
+
+import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
@@ -26,12 +28,15 @@ import javax.swing.JRadioButton;
 public class recipeAddMenu extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextArea ta_ingredients;
+	private JTextArea ta_directions;
+	private JTextField tf_recipeName;
+	private JTextField tf_cookTime;
+	private JTextField tf_prepTime;
 	private JButton b_AddInfo;
-	private JButton b_AddIng;
+	private JButton b_AddIngr;
 	private JButton b_AddDir;
+	private ButtonGroup group;
 
 
 	/**
@@ -51,7 +56,7 @@ public class recipeAddMenu extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(recipeAddMenu.class.getResource("/pantryPlanner/resources/recipe32.png")));
 		setTitle("ADD RECIPE");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 700, 700);
+		setBounds(100, 100, 702, 731);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -59,30 +64,30 @@ public class recipeAddMenu extends JFrame {
 		JLabel l_RecipeName = new JLabel("RECIPE NAME");
 		l_RecipeName.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
-		textField = new JTextField();
-		textField.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		textField.setColumns(10);
+		tf_recipeName = new JTextField();
+		tf_recipeName.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		tf_recipeName.setColumns(10);
 		
 		JLabel l_CookTime = new JLabel("COOK TIME (min)");
 		l_CookTime.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
-		textField_1 = new JTextField();
-		textField_1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		textField_1.setColumns(10);
+		tf_cookTime = new JTextField();
+		tf_cookTime.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		tf_cookTime.setColumns(10);
 		
 		JLabel l_PrepTime = new JLabel("PREP TIME (min)");
 		l_PrepTime.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
-		textField_2 = new JTextField();
-		textField_2.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		textField_2.setColumns(10);
+		tf_prepTime = new JTextField();
+		tf_prepTime.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		tf_prepTime.setColumns(10);
 		
 		JLabel l_Category = new JLabel("CATEGORY");
 		l_Category.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
 		//button block
 		b_AddInfo = new JButton("ADD");
-		b_AddIng = new JButton("ADD");
+		b_AddIngr = new JButton("ADD");
 		b_AddDir = new JButton("ADD");
 
 		
@@ -91,16 +96,16 @@ public class recipeAddMenu extends JFrame {
 		JLabel l_Ingredents = new JLabel("INGREDIENTS");
 		l_Ingredents.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		JTextArea ta_ingredients = new JTextArea();
+		ta_ingredients.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		
 		JSeparator separator_1 = new JSeparator();
 		
 		JLabel l_Directions = new JLabel("DIRECTIONS");
 		l_Directions.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
-		JTextArea textArea_1 = new JTextArea();
-		textArea_1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		JTextArea ta_directions = new JTextArea();
+		ta_directions.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		
 		JRadioButton rdb_Breakfast = new JRadioButton("Breakfast");
 		rdb_Breakfast.setFont(new Font("SansSerif", Font.PLAIN, 12));
@@ -124,25 +129,25 @@ public class recipeAddMenu extends JFrame {
 								.addGroup(gl_contentPane.createSequentialGroup()
 									.addComponent(l_Ingredents)
 									.addGap(18)
-									.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 555, GroupLayout.PREFERRED_SIZE))
+									.addComponent(ta_ingredients, GroupLayout.PREFERRED_SIZE, 555, GroupLayout.PREFERRED_SIZE))
 								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 									.addComponent(b_AddInfo, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
 									.addComponent(separator, GroupLayout.PREFERRED_SIZE, 652, GroupLayout.PREFERRED_SIZE)
 									.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
 										.addComponent(l_PrepTime, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)
 										.addPreferredGap(ComponentPlacement.UNRELATED)
-										.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE))
+										.addComponent(tf_prepTime, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE))
 									.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
 										.addComponent(l_CookTime)
 										.addPreferredGap(ComponentPlacement.UNRELATED)
-										.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE))))
+										.addComponent(tf_cookTime, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE))))
 							.addGap(12))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 								.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
 									.addComponent(l_RecipeName)
 									.addPreferredGap(ComponentPlacement.UNRELATED)
-									.addComponent(textField, GroupLayout.PREFERRED_SIZE, 333, GroupLayout.PREFERRED_SIZE))
+									.addComponent(tf_recipeName, GroupLayout.PREFERRED_SIZE, 333, GroupLayout.PREFERRED_SIZE))
 								.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
 									.addComponent(l_Category)
 									.addGap(76)
@@ -158,7 +163,7 @@ public class recipeAddMenu extends JFrame {
 					.addContainerGap(15, Short.MAX_VALUE)
 					.addComponent(l_Directions, GroupLayout.PREFERRED_SIZE, 79, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
-					.addComponent(textArea_1, GroupLayout.PREFERRED_SIZE, 555, GroupLayout.PREFERRED_SIZE)
+					.addComponent(ta_directions, GroupLayout.PREFERRED_SIZE, 555, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
@@ -166,13 +171,19 @@ public class recipeAddMenu extends JFrame {
 					.addContainerGap(15, Short.MAX_VALUE))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap(583, Short.MAX_VALUE)
-					.addComponent(b_AddIng, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
+					.addComponent(b_AddIngr, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap(583, Short.MAX_VALUE)
 					.addComponent(b_AddDir, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
 		);
+		group = new ButtonGroup();
+		group.add(rdb_Breakfast);
+		group.add(rdb_Lunch);
+		group.add(rdb_Dinner);
+		group.add(rdb_Any);
+		
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
@@ -181,7 +192,7 @@ public class recipeAddMenu extends JFrame {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(l_RecipeName)
-								.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addComponent(tf_recipeName, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 							.addGap(18)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(l_Category, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
@@ -190,11 +201,11 @@ public class recipeAddMenu extends JFrame {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(l_CookTime, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
-								.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addComponent(tf_cookTime, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 							.addGap(18)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(l_PrepTime, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
-								.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+								.addComponent(tf_prepTime, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(18)
@@ -209,15 +220,15 @@ public class recipeAddMenu extends JFrame {
 					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(l_Ingredents, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
-						.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 189, GroupLayout.PREFERRED_SIZE))
+						.addComponent(ta_ingredients, GroupLayout.PREFERRED_SIZE, 189, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(b_AddIng)
+					.addComponent(b_AddIngr)
 					.addGap(8)
 					.addComponent(separator_1, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(l_Directions, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
-						.addComponent(textArea_1, GroupLayout.PREFERRED_SIZE, 189, GroupLayout.PREFERRED_SIZE))
+						.addComponent(ta_directions, GroupLayout.PREFERRED_SIZE, 189, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(b_AddDir)
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -236,14 +247,20 @@ public class recipeAddMenu extends JFrame {
 			public void actionPerformed(ActionEvent arg0) 
 			{
 				//add methods
+				tf_recipeName.setText("");
+				tf_cookTime.setText("");
+				tf_prepTime.setText("");
+				group.clearSelection();
 			}
 		});
 		
-		b_AddIng.addActionListener(new ActionListener() 
+		b_AddIngr.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				//add methods
+				//ta_ingredients.setText("");
+				
 			}
 		});
 		
@@ -252,8 +269,11 @@ public class recipeAddMenu extends JFrame {
 			public void actionPerformed(ActionEvent e) 
 			{
 				//add methods
+				//ta_directions.setText("");
 			}
 		});
+		
+		//action listener for radio buttons here
 	}
 }//end recipeAddMenu
 
