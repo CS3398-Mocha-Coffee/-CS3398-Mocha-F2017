@@ -16,16 +16,19 @@ import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
+import javax.swing.border.BevelBorder;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class pantryAddMenu extends JFrame 
 {
 
+	private static final String CENTER = null;
 	private JPanel contentPane;
 	private JTextField tf_quantity;
 	private JButton b_submit;
 	private JTextField tf_item;
+	private static String[] itemGroup = {" Select Item ", "Dairy", "Fruits", "Vegetables"};	
 	/**
 	 * Create the frame.
 	 */
@@ -73,7 +76,9 @@ public class pantryAddMenu extends JFrame
 		tf_item.setColumns(10);
 		tf_item.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		
-		JComboBox comboBox = new JComboBox();
+		JComboBox cb_itemGroup = new JComboBox(itemGroup);
+		//trying to adjust alignment here
+		//cb_itemGroup.setAlignmentX(CENTER);
 
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
@@ -98,7 +103,7 @@ public class pantryAddMenu extends JFrame
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(41)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
-								.addComponent(comboBox, Alignment.LEADING, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(cb_itemGroup, Alignment.LEADING, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 								.addComponent(lblNewLabel, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
 					.addContainerGap())
 		);
@@ -110,7 +115,7 @@ public class pantryAddMenu extends JFrame
 					.addGap(18)
 					.addComponent(lblNewLabel)
 					.addGap(33)
-					.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addComponent(cb_itemGroup, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 					.addGap(44)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()

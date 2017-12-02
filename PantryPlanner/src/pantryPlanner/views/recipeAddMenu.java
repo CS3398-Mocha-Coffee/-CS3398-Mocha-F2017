@@ -36,7 +36,12 @@ public class recipeAddMenu extends JFrame {
 	private JButton b_AddInfo;
 	private JButton b_AddIngr;
 	private JButton b_AddDir;
+	private JRadioButton rdb_Breakfast;
+	private JRadioButton rdb_Lunch;
+	private JRadioButton rdb_Dinner;
+	private JRadioButton rdb_Any;
 	private ButtonGroup group;
+	private String category;
 
 
 	/**
@@ -108,15 +113,19 @@ public class recipeAddMenu extends JFrame {
 		ta_directions.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		
 		JRadioButton rdb_Breakfast = new JRadioButton("Breakfast");
+
 		rdb_Breakfast.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
 		JRadioButton rdb_Dinner = new JRadioButton("Dinner");
+
 		rdb_Dinner.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
 		JRadioButton rdb_Lunch = new JRadioButton("Lunch");
+
 		rdb_Lunch.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		
 		JRadioButton rdb_Any = new JRadioButton("Any");
+
 		rdb_Any.setFont(new Font("SansSerif", Font.PLAIN, 12));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
@@ -274,6 +283,40 @@ public class recipeAddMenu extends JFrame {
 		});
 		
 		//action listener for radio buttons here
+		//want to set a variable that will be passed to add function to the desired category
+		rdb_Breakfast.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				category = "breakfast";
+			}
+		});
+		
+		rdb_Lunch.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				category = "lunch";
+			}
+		});
+		
+		rdb_Dinner.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				category = "dinner";
+			}
+		});
+		
+		rdb_Any.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				category = "any";
+			}
+		});
+
+		
 	}
 }//end recipeAddMenu
 
