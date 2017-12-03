@@ -9,21 +9,20 @@ public class CSVUtils {
 
     private static final char DEFAULT_SEPARATOR = ',';
     private static final char DEFAULT_QUOTE = '"';
-    private static ArrayList<List<String>> = new ArrayList<List<String>>();
+    private static ArrayList<List<String>> rows = new ArrayList<List<String>>();
    
     /**
      * getParsed uses @param csvFile to parse a file and @return an ArrayList of Lists containing elements of each line.
      * @throws Exception if file not found.
      */
     public static ArrayList<List<String>> getParsed(String csvFile) throws Exception {
-        ArrayList<LIst<String>> parsed = new ArrayList<List<String>>();
         Scanner scanner = new Scanner(new File(csvFile));
         while (scanner.hasNext()) {
             List<String> line = parseLine(scanner.nextLine());
-            parsed.add(line);
+            rows.add(line);
         }
         scanner.close();
-        return parsed;
+        return rows;
     }
     
     // ************Code for parsing the CSV files and handling quotes/separators************
