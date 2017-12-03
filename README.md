@@ -12,6 +12,12 @@ UPDATE - 08NOV2017 Pantry code integrated and now in Pantry Planner on the devel
 UPDATE - 08NOV2017 Recipe database built out and ready for intergration.  Web scrapper and parsing program is now in the development branch.
 
 ***GUI UPDATES***
+UPDATE - 02DEC2017 Added in the variables to pass strings back and forth and display info. Filled out the pull down menu to match pantry.
+
+UPDATE - 01DEC2017 recipeAddMenu:  added action listners for the radio buttons and assigned the correct string to variable category.
+pantryAddMenu:  added itemGroup array for the JComboBox.
+On all frames:  added functionality to clear JTextFeilds and radio buttons on button clicks.
+
 UPDATE - 20NOV2017 Met up with Arthur and laid out the plan for combinding the recipe database and methods into the GUI.
 Added action listeners and changed category from a pull down to 4 radio buttons.
 
