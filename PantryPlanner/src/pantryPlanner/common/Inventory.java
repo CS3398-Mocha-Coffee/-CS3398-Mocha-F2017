@@ -148,4 +148,8 @@ public class Inventory {
 		DisplayIngredients itemize = new DisplayIngredients();
 		return itemize.display(categorize.sort(idNums, ingredients));
 	}
+	
+	public void putAll(Hashtable<Integer, Ingredient> newItems) {
+		ingredients.putAll(newItems);
+	}
 }
