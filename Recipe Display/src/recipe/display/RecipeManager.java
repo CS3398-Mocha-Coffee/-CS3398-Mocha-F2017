@@ -1,4 +1,10 @@
 package recipe.display;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import ingredient.utilities.CSVUtils;
@@ -9,13 +15,14 @@ public class RecipeManager {
 	private static ArrayList<List<String>> directionsFile = new ArrayList<List<String>>();
 	private static ArrayList<List<String>> quantitiesFile = new ArrayList<List<String>>();
 	private List<Recipe> recipes = new ArrayList<Recipe>();
-
+	private int recipeSize;
 	public RecipeManager() {
 		try {
 			initRecipes();
 			initDirections();
 			initQuantities();
 			initTimes();
+			recipeSize = recipes.size();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,6 +38,7 @@ public class RecipeManager {
 		for (List<String> item : ingredientsFile) {
 			for(String name : item) {
 				if(name.contains("[") && name.contains("]")) {//filters out name
+					name = name.replace("[u'", "");
 					name = name.replace("[", "");
 					name = name.replace("]", "");
 					name = name.replace("'", "");
@@ -45,6 +53,9 @@ public class RecipeManager {
 				}
 				else {
 					if(!name.contains("Name") && !name.contains("Quantity") && !name.contains("Ingredients")) {
+						name = name.replace("[u'", "");
+						name = name.replace("u'", "");
+
 						name = name.replace("[", "");
 						name = name.replace("]", "");
 						name = name.replace("'", "");
@@ -104,10 +115,11 @@ public class RecipeManager {
 		dirs.add(directions.get(directions.size()-1));
 		int r = 0;
 		for(String d: dirs) {
+			d = d.replace("[u'", "");
 			d= d.replace("[", "");
 			d = d.replace("]", "");
 			d = d.replace("\"", "");
-			d = d.replace("'", "");
+			d = d.replace("'u", "");
 			d = d.replace(",", "");
 			this.recipes.get(r).setDirections(d);
 			r++;
@@ -128,6 +140,8 @@ public class RecipeManager {
 				}
 				else {
 					if(!item.equals("")) {
+						item = item.replace("[u'", "");
+						item = item.replace("u'", "");
 						item = item.replace("'", "");
 						item = item.replace("[", "");
 						item = item.replace("]", "");
@@ -196,10 +210,13 @@ public class RecipeManager {
 				if(r < recipes.size()) {
 					String total = timesFile.get(i).get(k).replace("['", "");
 					total = total.replace("']", "");
+					total = total.replace("[u'", "");
 					String cook = timesFile.get(i).get(k+1).replace("['", "");
 					cook = cook.replace("']", "");
+					cook = cook.replace("[u'", "");
 					String prep = timesFile.get(i).get(k+2).replace("['", "");
 					prep = prep.replace("']", "");
+					prep = prep.replace("[u'", "");
 					recipes.get(r).setTotalTime(total);
 					recipes.get(r).setCookTime(cook);
 					recipes.get(r).setPrepTime(prep);
@@ -209,8 +226,8 @@ public class RecipeManager {
 			}
 		}
 	}
-
-	public static void main(String[] args) {
+	
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		RecipeManager recipes1 = new RecipeManager();
 		for(Recipe r : recipes1.getRecipes()) {
