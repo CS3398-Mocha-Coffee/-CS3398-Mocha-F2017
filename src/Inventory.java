@@ -8,14 +8,12 @@ public class Inventory {
 	public Hashtable<Integer, Ingredient> data = new Hashtable<Integer, Ingredient>();
 	public Hashtable<Integer, Ingredient> ingredients = new Hashtable<Integer, Ingredient>();
 	public ArrayList<Integer> idNums = new ArrayList<Integer>();
-	FindId find;
 	
 	/**
 	 * Constructor takes @param database and stores contents in a Hashtable as a local database
 	 */
 	public Inventory(Hashtable<Integer, Ingredient> database) {
 		data.putAll(database);
-		find = new FindId(database);
 	}
 	
 	
@@ -31,10 +29,6 @@ public class Inventory {
 			idNums.add(itemId);
 			Collections.sort(idNums);
 		}
-	}
-	public void addItem(String itemName, double qty) throws IngredientException {
-		int itemId = find.getId(itemName);
-		addItem(itemId, qty);
 	}
 	public void addItem(Ingredient item) throws IngredientException {
 		if (hasItem(item.getId())) {	

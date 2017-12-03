@@ -1,4 +1,5 @@
 package pantryPlanner.common;
+
 public class CheckQty {
 	private Ingredient onHand;
 	public Ingredient required;

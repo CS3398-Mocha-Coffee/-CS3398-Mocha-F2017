@@ -5,19 +5,16 @@ import java.util.Collections;
 import java.util.Hashtable;
 
 public class Inventory {
-	public Hashtable<Integer, Ingredient> data = new Hashtable<Integer, Ingredient>();
-	public Hashtable<Integer, Ingredient> ingredients = new Hashtable<Integer, Ingredient>();
-	public ArrayList<Integer> idNums = new ArrayList<Integer>();
-	FindId find;
+	private static Hashtable<Integer, Ingredient> data = new Hashtable<Integer, Ingredient>();
+	public static Hashtable<Integer, Ingredient> ingredients = new Hashtable<Integer, Ingredient>();
+	public static ArrayList<Integer> idNums = new ArrayList<Integer>();
 	
 	/**
 	 * Constructor takes @param database and stores contents in a Hashtable as a local database
 	 */
 	public Inventory(Hashtable<Integer, Ingredient> database) {
 		data.putAll(database);
-		find = new FindId(database);
 	}
-	
 	
 	/**
 	 * addItem takes @param itemId and @param qty and either adds a new ingredient to the inventory
@@ -31,27 +28,7 @@ public class Inventory {
 			idNums.add(itemId);
 			Collections.sort(idNums);
 		}
-	}
-	public void addItem(String itemName, double qty) throws IngredientException {
-		int itemId = find.getId(itemName);
-		addItem(itemId, qty);
-	}
-	public void addItem(Ingredient item) throws IngredientException {
-		if (hasItem(item.getId())) {	
-			CheckQty check = new CheckQty();
-			check.simplify(item);
-			check.simplify(ingredients.get(item.getId()));
-			if (item.getUnit().equals(ingredients.get(item.getId()).getUnit()))
-				incrementQty(item.getId(), item.getQty());
-			else {
-				check.checkUnits();
-				incrementQty(item.getId(), check.required.getQty());
-			}
-		}else {
-			ingredients.put(item.getId(), retrieve(item.getId(), item.getQty()));
-			idNums.add(item.getId());
-			Collections.sort(idNums);
-		}
+		DisplayIngredients dis = new DisplayIngredients();
 	}
 	/**
 	 * removeItem takes @param itemId and removes the specified item if one exists, 
@@ -139,6 +116,7 @@ public class Inventory {
 		temp.setQty(qty);
 		return temp;
 	}
+	
 	/**
 	 * list Ingredients uses the Categorize class and the DisplayItem class to form a cancatenated string
 	 * to  @return and print an itemized list of ingredients.

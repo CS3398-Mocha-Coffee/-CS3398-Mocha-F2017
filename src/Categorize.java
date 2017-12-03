@@ -1,6 +1,5 @@
-
 import java.util.ArrayList;
-import java.util.Hashtablt;
+import java.util.Hashtable;
 
 public class Categorize {
 	private ArrayList<ArrayList<Ingredient>> sorted = new ArrayList<ArrayList<Ingredient>>();

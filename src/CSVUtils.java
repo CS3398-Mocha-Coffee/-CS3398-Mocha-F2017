@@ -7,13 +7,13 @@ public class CSVUtils {
 
     private static final char DEFAULT_SEPARATOR = ',';
     private static final char DEFAULT_QUOTE = '"';
+    private static ArrayList<List<String>> rows = new ArrayList<List<String>>();
    
     /**
      * getParsed uses @param csvFile to parse a file and @return an ArrayList of Lists containing elements of each line.
      * @throws Exception if file not found.
      */
     public static ArrayList<List<String>> getParsed(String csvFile) throws Exception {
-        ArrayList<List<String>> rows = new ArrayList<List<String>>();
         Scanner scanner = new Scanner(new File(csvFile));
         while (scanner.hasNext()) {
             List<String> line = parseLine(scanner.nextLine());
