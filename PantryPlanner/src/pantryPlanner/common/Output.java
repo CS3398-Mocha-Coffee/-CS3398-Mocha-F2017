@@ -1,5 +1,6 @@
 package pantryPlanner.common;
 
+import javax.swing.JOptionPane;
 
 public class Output {
 	private String output;
@@ -9,5 +10,6 @@ public class Output {
 	}	
 	public void write(String info) {
 		System.out.println(info);
+		JOptionPane.showMessageDialog(null, info);
 	}
 }
