@@ -73,7 +73,7 @@ public class SaveRecipe{
            // recipe.setCookTime(cookTime);
             
             //asks for total time
-            System.out.println("\nHow long is the toal time to make the recipe?");
+            System.out.println("\nHow long is the total time to make the recipe?");
             totalTime = scan.nextLine();
            // recipe.setTotalTime(totalTime);
             
@@ -279,8 +279,8 @@ public class SaveRecipe{
 		// TODO Auto-generated method stub
 		  SaveRecipe test1 = new SaveRecipe();
 	        
-	      //test1.saveRecipeToCSV(); //to test saveRecipe file
-		  test1.readRecipesFrCSV();
+	      test1.saveRecipeToCSV(); //to test saveRecipe file
+		 // test1.readRecipesFrCSV();
 		
 	}
 }//end of class
