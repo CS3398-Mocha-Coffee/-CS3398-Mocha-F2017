@@ -74,7 +74,7 @@ public class pantryPal {
 			choice = (char) System.in.read();
 			
 			if (choice == 'A'||choice =='a') {
-				System.out.println("Might need integration with add recipe code");
+				System.out.println("Mock adder");
 			}
 			if (choice == 'R'||choice =='r') {
 				System.out.println("Input case sensative recipe to be removed");

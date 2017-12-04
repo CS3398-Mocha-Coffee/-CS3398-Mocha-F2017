@@ -1,21 +1,21 @@
 package recipes;
 import java.util.*;
 
-import ingrediants.Ingredient;
 
 public class recipeClass {
-
+	
 	public class IngredientProperties {
 		Ingredient ingredient;
-		double amount;
-		String measurements;
+		String id;
+		Double quatity;
+		String unit;
 		IngredientProperties() {}
-		IngredientProperties(Ingredient type, double volume, String measurement) {
-			ingredient = type;
-			amount = volume;
-			measurements = measurement;
+		IngredientProperties(Ingredient name, Double qty, String units) {
+			ingredient = name;
+			quatity = qty;
+			unit = units;
 		}
-		String getName() { return ingredient.getItemName(); }
+		String getName() { return ingredient.getName(); }
 	}
 
 	public class StepProperties{
@@ -37,6 +37,8 @@ public class recipeClass {
 		}
 	}
 
+	IDatabase DB = new IDatabase("/Users/ajmor/eclipse-workspace/PantryPlanner/src/pantryPlanner/databases/ingredients.csv");
+	private Inventory inventory = new Inventory(DB.getDatabase());
 	protected String name;
 	protected String prepTime;
 	protected String cookTime;
@@ -96,12 +98,14 @@ public class recipeClass {
 		this.ingredients.add(newItem);
 	}
 
-	public void addItem(String itemName, double volume, String measurement) {
-		Ingredient ingre = new Ingredient();
-		ingre.setItemName(itemName);
-		this.ingredients.add(new IngredientProperties(ingre, volume, measurement));
+	public void addItem(String itemName, Double qty) {
+		try {
+			inventory.addItem(itemName, qty);
+		} catch (IngredientException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-
 
 	public StepProperties getSteps(int stepNumber){
 		return this.steps.get(stepNumber);

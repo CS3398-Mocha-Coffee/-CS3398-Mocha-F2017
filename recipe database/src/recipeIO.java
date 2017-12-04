@@ -25,6 +25,7 @@ public class recipeIO {
 				}
 				String[] parts = line.split(",");
 				recipeClass newRecipe = new recipeClass();
+				Inventory inven = new Inventory(null);
 				newRecipe.setName(parts[0]);
 				newRecipe.setPrepTime(parts[1]);
 				newRecipe.setCookTime(parts[2]);
@@ -35,8 +36,8 @@ public class recipeIO {
 				String[] steps = parts[7].split(":");
 				
 				for (int i = 0; i < ingredients.length; i++) {
-					double vol = Double.parseDouble(volume[i]);
-					newRecipe.addItem(ingredients[i], vol, measurement[i]);
+					double qty = Double.parseDouble(volume[i]);
+					newRecipe.addItem(ingredients[i], qty);
 				}
 				for (int i = 0; i < steps.length; i++) {
 					newRecipe.addSteps(i+1, steps[i]);
@@ -68,18 +69,18 @@ public class recipeIO {
 				FWrite.write(R.totalTime+",");
 				
 				String ingre = "";
-				String vol = "";
-				String measure = "";
+				String qty = "";
+				String unit = "";
 				for(int i = 0; i < R.ingredients.size(); i++) {
 					IngredientProperties ip = R.ingredients.get(i);
-					ingre += ip.ingredient.getItemName() +":";
-					String S = Double.toString(ip.amount);
-					vol += S +":";
-					measure += ip.measurements+":";
+					ingre += ip.ingredient.getName()+":";
+					Double S = ip.quatity;
+					qty += S +":";
+					unit += ip.unit+":";
 				}
 				FWrite.write(ingre+",");
-				FWrite.write(vol+",");
-				FWrite.write(measure+",");
+				FWrite.write(qty+",");
+				FWrite.write(unit+",");
 
 				String steps = "";
 				for(int i = 0; i < R.steps.size(); i++) {
