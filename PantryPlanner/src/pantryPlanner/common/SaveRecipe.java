@@ -279,8 +279,8 @@ public class SaveRecipe{
 		// TODO Auto-generated method stub
 		  SaveRecipe test1 = new SaveRecipe();
 	        
-	      test1.saveRecipeToCSV(); //to test saveRecipe file
-		 // test1.readRecipesFrCSV();
+	      //test1.saveRecipeToCSV(); //to test saveRecipe file
+		 test1.readRecipesFrCSV();
 		
 	}
 }//end of class
