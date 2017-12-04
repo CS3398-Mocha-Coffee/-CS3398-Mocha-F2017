@@ -1,9 +1,6 @@
 package addrecipe1;
+//import recipe.display.*;
 
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,21 +8,15 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.List;
 import java.util.Scanner;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JTextField;
-
 
 public class addRecipe {
 
-    /* to handle future gui's
-	static JFrame frame1; // for frame
-	static ActionListener listener; //to add action listener
-	static JTextField text1; // for text box
-	static JButton button1; 
-	*/
+	private static ArrayList<List<String>> parcedFile = new ArrayList<List<String>>();
+	private static Hashtable<String, Integer> ingredients = new Hashtable<String, Integer>(); 
 	
     //variables 
     char response;
@@ -64,22 +55,26 @@ public class addRecipe {
               	
         	 
         	scan.nextLine(); //to fix last newline character error 
-        	 
+        	//Recipe recipe = new Recipe();
         	//asks for the name of the recipe
             System.out.println("\nWhat is the name of this recipe?");
             recipeName = scan.nextLine();
+            //recipe.setName(recipeName);
             
             //asks for preparation time
             System.out.println("\nHow long is the preperation time?");
             prepTime = scan.nextLine();
+           // recipe.setName(prepTime);
              
             //asks for cook time
             System.out.println("\nHow long is the cook time?");
             cookTime = scan.nextLine();
+           // recipe.setCookTime(cookTime);
             
             //asks for total time
             System.out.println("\nHow long is the toal time to make the recipe?");
             totalTime = scan.nextLine();
+           // recipe.setTotalTime(totalTime);
             
             //prints data is just got from user to a .csv file
             file.newLine();
@@ -96,7 +91,9 @@ public class addRecipe {
             //asks for amount of ingredients for recipe
             System.out.println("\nHow many ingredients are in this recipe?");
             numIngre = scan.nextInt();
-             
+            
+            List<String> ingredients = new ArrayList<String>(); //make list to store ingredients
+            
             //for loop to enter all ingredients into .csv file
             for(int x=1; x<=numIngre; x++)
             {
@@ -104,20 +101,32 @@ public class addRecipe {
             	
             	System.out.println("Enter ingredient number " + x );
             	ingredient = scan.nextLine();
+            	ingredients.add(ingredient); //to add to array list
+            	
             	
             	file.write(ingredient); // add ingredient to output file
             	file.write(":");
             	
             }
+           // recipe.setIngredients(ingredients);
+            
             file.write(",");
+            
+            List<String> quantities = new ArrayList<String>(); //array list to hold quantities
+            
             for(int y=1; y<=numIngre; y++)
             {
                 System.out.println("Enter amount for ingredient #" + y);
                 ingreAmount = scan.nextLine();
+                quantities.add(ingreAmount); // add quantities to array list 
+                
                 file.write(ingreAmount); 
             	file.write(":");
             }
+          //  recipe.setQuantities(quantities);
+            
             file.write(","); // skip cell for steps
+            
             
             // This adds directions to the recipes. 
             //asks for amount of number of directions
@@ -148,8 +157,6 @@ public class addRecipe {
         
         }//to end try function
         catch(IOException e){
-           // System.out.println(e);
-            //System.out.println("Failure");
         	e.printStackTrace();
         }
         finally{
@@ -163,4 +170,32 @@ public class addRecipe {
         }
      }     
      
-}
+    
+    void readRecipe1() throws Exception {
+    	
+    	parcedFile = csvScraper.getParsed("User-Inputted-Recipes"); //change csvScraper to CSVUtils
+    	// Parse the information in each line and set the fields of the ingredients 
+    	// before putting them in a Hashtable.
+    	for (int i = 0; i < parcedFile.size(); i++) {
+    		List<String> item = parcedFile.get(i);
+    		
+    		if( i==0)
+    			System.out.println("done");
+    		else 
+    		{
+    		for (int j = 0; j < 7;j++) {
+    			
+    		item.get(4);
+    		System.out.println(item.get(4));
+    		
+    		
+    			
+    		//item.get(0), item.get(1), item.get(2);
+    		}
+    			
+    			
+    		}
+    	}
+    }
+    
+}//end of class
