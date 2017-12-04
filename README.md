@@ -45,15 +45,21 @@ recipe(16, 32, 128): Icon made by David Lanham Freeware non-commercial from www.
 # -CS3398-Mocha-F2017
 
 ## To Be Completed:
-- [ ] Complete Shopping List feature
-- [ ] Map out website design
-- [ ] Allow recipes to interact with shopping list
+- [ ] Connect all inventory manipulation methods to GUI
 - [ ] INTEGRATE CODE INTO DEVELOP BRANCH
 
 ## Completed:
-- [x] Determine how to approach the create of Ingredients Database
+- [x] Create CSVUtils to read data from a CSV file
+- [x] Create ingredient class to store ingredient details
+- [x] Create ingredients database and a method of obtaining data
+- [x] Create inventory class with methods to add/edit/remove ingredient objects
+- [x] Create Comparitor class to compare two inventory objects
+  - [x] Create method to compare two ingredients and find difference in qty
+  - [x] Create method of finding substitutes for recipe ingredents
+  - [x] Create method of unifying and converting units
+- [x] Create method of displaying an itemized list of ingredients in an inventory object, sorted by ingredient category
 - [x] Create classes for each General Ingredient Category
-- [x] User Login
+- [x] Create methods of storing and restoring pantry and shopping list data when closing/opening the app
 - [x] Web Scraper UML Design
 - [x] Create Ingredients Database
 - [x] Web Crawl/Scrape into database
