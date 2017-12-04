@@ -1,21 +1,12 @@
 package pantryPlanner.views;
 
-import java.awt.event.ActionEvent;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 
-import javax.swing.AbstractAction;
-import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
-import javax.swing.text.AttributeSet;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DocumentFilter;
-import javax.swing.text.AbstractDocument;
+import pantryPlanner.common.*;
 
 
 public class RecipeSearchThread extends SwingWorker{
@@ -57,7 +48,7 @@ public class RecipeSearchThread extends SwingWorker{
 	protected Object doInBackground() throws Exception {
 		// TODO Auto-generated method stub
 			try {
-				CustomSearch.CustomSearch.customSearch(parent.searchField.getText());
+				CustomSearch.customSearch(parent.searchField.getText());
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -70,7 +61,6 @@ public class RecipeSearchThread extends SwingWorker{
 		//when search is finished it will initiate these
 		/*TODO: 
 		make it to where it will load these recipes into the current Recipe list*/
-		
 		window.dispose(); //after search is finished it will auto close dialog
 		parent.dispose(); // and the parent frame
 	}

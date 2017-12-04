@@ -3,7 +3,6 @@ package pantryPlanner.views;
 import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
-import java.beans.PropertyChangeSupport;
 
 import javax.swing.AbstractAction;
 import javax.swing.BorderFactory;
@@ -17,7 +16,6 @@ import javax.swing.text.AbstractDocument;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DocumentFilter;
-import javax.swing.text.DocumentFilter.FilterBypass;
 
 public class RecipeSearchView extends JFrame{
 	public static final String SEARCH_ACTION = "START SEARCH";

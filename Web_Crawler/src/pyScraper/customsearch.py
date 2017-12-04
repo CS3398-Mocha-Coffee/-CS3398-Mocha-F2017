@@ -22,8 +22,8 @@ def customSearch(searchTerm):
     scraper = AllRecipes.AllRecipes("http://www.allrecipes.com") #initalize scraper
 
     Results = googleSearch(searchTerm, api_key, cse_id)
-    #pathToFile = "../PantryPlanner/src/pantryPlanner/databases/"
-    pathToFile = "C:\\Users\\Mom\\Desktop\\Software Engineering\\-CS3398-Mocha-F2017\\Recipe Display\\src\\"
+    pathToFile = "../PantryPlanner/src/pantryPlanner/databases/"
+    #pathToFile = "C:\\Users\\Mom\\Desktop\\Software Engineering\\-CS3398-Mocha-F2017\\Recipe Display\\src\\"
     #opening CSV file
     with open(pathToFile+'recipe times.csv', 'a') as times, \
          open(pathToFile+'recipe ingredients.csv', 'a') as ingre, \
@@ -75,7 +75,6 @@ def customSearch(searchTerm):
 
 if __name__ == '__main__':
     print("Starting Search...")
-    customSearch("Waffles")
     # please do not add moore custom searches.
     # This is just to show that the function works.
     # will use just the function when importing to JAVA.
