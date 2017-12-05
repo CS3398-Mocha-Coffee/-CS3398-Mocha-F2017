@@ -5,15 +5,22 @@ Team Mocha: Pantry Planner README
 Pantry Planner is a desktop application that gives the user real-time access to the food available to them in their pantry.  As well as possible recipes for the food available.  Recipes are scraped in from the internet and stored in databases included with the application.
 
 Languages Used: Java, Python
+
 Database: CSV
 
 ***Tasks***
 Aaron: GUI
+
 Able: Recipe Database
+
 Arthur: Recipe Database
+
 Brian: Pantry Database
+
 Charles: Recipe Webscrapper
-Sarah: 
+
+Sarah: I/O
+
 
 
 ***OVERALL UPDATES***
